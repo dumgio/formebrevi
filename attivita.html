@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Corsi, laboratori filosofici e aree di intervento pedagogico. Promuoviamo il pensiero critico e l'inclusione per ogni fascia d'età.">
+    <meta name="keywords" content="interventi pedagogici, corsi filosofia, laboratori pensiero critico, inclusione scolastica">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.formebrevi.it/attivita.html">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Attività e Corsi | Formebrevi APS">
+    <meta property="og:description" content="Corsi, laboratori filosofici e aree di intervento pedagogico. Promuoviamo il pensiero critico e l'inclusione per ogni fascia d'età.">
+    <meta property="og:url" content="https://www.formebrevi.it/attivita.html">
+    <meta property="og:site_name" content="Formebrevi APS">
+    <meta property="og:image" content="https://www.formebrevi.it/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Attività e Corsi | Formebrevi APS">
+    <meta name="twitter:description" content="Corsi, laboratori filosofici e aree di intervento pedagogico. Promuoviamo il pensiero critico e l'inclusione per ogni fascia d'età.">
+    <meta name="twitter:image" content="https://www.formebrevi.it/img/og-image.png">
+    <title>Attività e Corsi | Formebrevi APS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/common.css">
+    <style>
+                                                                                                                                                                .page-hero{max-width:1080px;margin:0 auto;padding:36px 24px 32px;animation:up .55s ease both;}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:100px;padding:6px 14px;margin-bottom:20px;}
+        .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+        .badge-sky{color:#1E8449;background:#D5F5E3;}.badge-sky::before{background:#1E8449;}
+        .page-hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;color:var(--ink);margin-bottom:16px;}
+        .page-hero .sub{font-size:1.05rem;color:var(--muted);line-height:1.65;max-width:560px;}
+        .divider{max-width:1080px;margin:0 auto;padding:0 24px;}
+        .divider::after{content:'';display:block;height:1px;background:var(--border);}
+        .section-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:20px;display:block;padding-bottom:12px;border-bottom:1px solid var(--border);}
+        .btn{display:inline-block;font-family:var(--f);font-size:0.82rem;font-weight:600;text-decoration:none;padding:13px 26px;border-radius:100px;transition:transform .18s,box-shadow .18s;white-space:nowrap;}
+        .btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.12);}
+        .btn-dark{background:#1B4F72;color:#fff;}
+                footer strong{color:#0a0a0a;font-weight:600;}
+        
+        .aree{max-width:1080px;margin:0 auto;padding:36px 24px;}
+        .aree-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+        .acard{border-radius:16px;padding:32px;position:relative;overflow:hidden;transition:transform .2s;}
+        .acard:hover{transform:translateY(-2px);}
+        .acard-num{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(0,0,0,.5);margin-bottom:12px;display:block;}
+        .acard h2{font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.2;}
+        .acard p{font-size:0.9rem;color:rgba(0,0,0,.6);line-height:1.65;}
+        .acard-dot{position:absolute;bottom:-20px;right:-20px;width:64px;height:64px;border-radius:50%;opacity:.25;}
+        .c1{background:#D6EAF8;}.c1 .acard-dot{background:#1E8449;}
+        .c2{background:#FDEBD0;}.c2 .acard-dot{background:#D35400;}
+        
+        /* Stile Card Sospensione */
+        .c-alert{background:#F2F3F4; border:1px dashed var(--border); grid-column: 1 / -1;}
+        .c-alert .acard-num{color:var(--orange-dark);}
+
+        .science{max-width:1080px;margin:0 auto;padding:0 24px 48px;}
+        .science-card{background:#D5F5E3;border-radius:20px;padding:32px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;border:2px solid var(--lime-dk);}
+        .science-card .tag{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#1E8449;margin-bottom:12px;display:block;}
+        .science-card h2{font-size:1.5rem;font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-0.02em;}
+        .science-card p{font-size:0.9rem;color:rgba(0,0,0,.6);margin-top:10px;line-height:1.6;}
+        
+        @media(max-width:680px){
+            .aree{padding:24px 20px;}
+            .aree-grid{grid-template-columns:1fr;}
+            .science{padding:0 20px 60px;}
+            .science-card{grid-template-columns:1fr;padding:32px 24px;gap:24px;}
+                                                        }
+    </style>
+</head>
+<body>
+
+<nav class="nav"></nav>
+
+<header class="page-hero">
+    <span class="hero-badge badge-sky">Cosa facciamo</span>
+    <h1>Corsi, laboratori e formazione</h1>
+    <p class="sub">La formazione è sempre stata al centro della nostra missione. Crediamo che la filosofia sia uno strumento potente per stimolare il pensiero critico, la capacità di argomentare e la creatività fin dall'infanzia.</p>
+</header>
+
+<div class="divider"></div>
+
+<section class="aree">
+    <span class="section-label">Aree di intervento</span>
+    <div class="aree-grid">
+        <div class="acard c1">
+            <p class="acard-num">01 — Educazione &amp; Inclusione</p>
+            <h2>Educazione, Inclusione e Comunità</h2>
+            <p>Interventi progettati per ogni fascia d'età, dall'infanzia all'adultità. Supportiamo scuole e famiglie attraverso sportelli pedagogici, percorsi di orientamento e laboratori per lo sviluppo delle competenze trasversali. Progettiamo percorsi per persone con disabilità orientati alla costruzione di un'autonomia reale, e creiamo reti solidali tra istituzioni, scuole e Terzo settore.</p>
+            <div class="acard-dot"></div>
+        </div>
+        <div class="acard c2">
+            <p class="acard-num">02 — Filosofia &amp; Ricerca</p>
+            <h2>Dialogo Filosofico e Pensiero Critico</h2>
+            <p>Organizziamo corsi di pratica filosofica, caffè filosofici e percorsi per giovani filosofi. Crediamo che dialogando si possano creare spazi di comprensione, ascolto e cooperazione, fin dall'infanzia. Promuoviamo la ricerca pedagogica in accesso aperto, collegando il mondo accademico ai contesti operativi del Terzo Settore.</p>
+            <div class="acard-dot"></div>
+        </div>
+
+        <div class="acard c-alert">
+            <p class="acard-num">Avviso ai soci</p>
+            <h2>Attività Editoriali</h2>
+            <p>Comunichiamo che le <strong>attività editoriali di Formebrevi APS sono momentaneamente sospese</strong>. Al momento non vengono valutate nuove proposte o manoscritti. La nostra missione prosegue attraverso la formazione e i laboratori attivi sul territorio.</p>
+        </div>
+    </div>
+</section>
+
+<section class="science">
+    <div class="science-card">
+        <div>
+            <span class="tag">Vuoi saperne di più?</span>
+            <h2>Scrivici per i prossimi corsi.</h2>
+            <p>Siamo disponibili a presentare le nostre attività, collaborare con scuole e istituzioni o avviare nuovi percorsi nel tuo contesto.</p>
+        </div>
+        <a href="contatti.html" class="btn btn-dark">Contattaci →</a>
+    </div>
+</section>
+
+<footer>
+    <p><strong>Formebrevi APS</strong><br>
+    Via Michelangelo s.n., 93100 Caltanissetta<br>
+    C.F. 92064060855 · RUNTS n. 72338 del 07/11/2022</p>
+    <p style="margin-top:12px;"><a href="privacy.html" style="color:#7F8C8D;text-decoration:none;font-size:0.75rem;">Privacy &amp; Cookie Policy</a></p>
+</footer>
+
+<script src="/menu.js"></script>
+</body>
+</html>

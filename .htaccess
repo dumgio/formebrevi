@@ -1,0 +1,80 @@
+# ── 404 PERSONALIZZATA ──────────────────────────────
+ErrorDocument 404 /404.html
+
+# ── REDIRECT www → non-www (HTTPS) ──────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Forza HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Rimuovi www
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ── COMPRESSIONE GZIP ────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE text/plain text/xml application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml application/json
+</IfModule>
+
+# ── CACHE BROWSER ────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML — breve cache (contenuto aggiornabile)
+  ExpiresByType text/html                  "access plus 1 hour"
+
+  # CSS e JS — cache lunga (file versionati)
+  ExpiresByType text/css                   "access plus 1 year"
+  ExpiresByType application/javascript     "access plus 1 year"
+  ExpiresByType text/javascript            "access plus 1 year"
+
+  # Immagini e font
+  ExpiresByType image/png                  "access plus 1 year"
+  ExpiresByType image/jpeg                 "access plus 1 year"
+  ExpiresByType image/gif                  "access plus 1 year"
+  ExpiresByType image/webp                 "access plus 1 year"
+  ExpiresByType image/svg+xml              "access plus 1 year"
+  ExpiresByType image/x-icon               "access plus 1 year"
+  ExpiresByType font/woff2                 "access plus 1 year"
+  ExpiresByType font/woff                  "access plus 1 year"
+
+  # PDF
+  ExpiresByType application/pdf            "access plus 1 month"
+</IfModule>
+
+# ── SICUREZZA BASE ───────────────────────────────────
+# Nascondi versione server
+ServerSignature Off
+
+# Blocca accesso a file sensibili
+<FilesMatch "(\.htaccess|\.htpasswd|\.git|\.env)">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Previeni clickjacking
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ── MIME TYPES ───────────────────────────────────────
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
+</IfModule>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74___lsphp .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

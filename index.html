@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Associazione dedicata alla ricerca pedagogica, al dialogo filosofico e all'inclusione sociale. Promuoviamo percorsi formativi e cultura in accesso aperto.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Formebrevi APS | Pedagogia, Philosophy e Ricerca Educativa">
+    <meta property="og:description" content="Associazione dedicata alla ricerca pedagogica, al dialogo filosofico e all'inclusione sociale. Promuoviamo percorsi formativi e cultura in accesso aperto.">
+    <meta property="og:url" content="https://www.formebrevi.it/index.html">
+    <meta property="og:site_name" content="Formebrevi APS">
+    <meta property="og:image" content="https://www.formebrevi.it/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Formebrevi APS | Pedagogia, Philosophy e Ricerca Educativa">
+    <meta name="twitter:description" content="Associazione dedicata alla ricerca pedagogica, al dialogo filosofico e all'inclusione sociale. Promuoviamo percorsi formativi e cultura in accesso aperto.">
+    <meta name="twitter:image" content="https://www.formebrevi.it/img/og-image.png">
+    <meta name="keywords" content="pedagogia, filosofia educazione, ricerca educativa, terzo settore, inclusione, open access">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.formebrevi.it/index.html">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <title>Formebrevi APS | Pedagogia, Philosophy e Ricerca Educativa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/common.css">
+    <style>
+                                        
+                                                                                        
+                                                
+        /* HERO */
+        .hero{max-width:1080px;margin:0 auto;padding:64px 24px 56px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;animation:up .55s ease both;}
+        .hero-left{display:flex;flex-direction:column;gap:14px;}
+        .hero-badge-home{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:#1E8449;border-radius:100px;padding:6px 14px;width:fit-content;}
+        .hero h1{font-size:clamp(2.8rem,8vw,5.2rem);font-weight:800;line-height:0.92;letter-spacing:-0.03em;color:var(--ink);}
+        .hero-sub{font-size:1.1rem;color:var(--muted);line-height:1.55;max-width:380px;margin-top:10px;}
+        .hero-actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+        
+        .btn{display:inline-block;font-size:0.82rem;font-weight:600;text-decoration:none;padding:14px 28px;border-radius:100px;transition:0.2s;}
+        .btn-fill{background:var(--ink);color:var(--white);}
+        .btn-outline{border:1.5px solid var(--border);color:var(--ink);}
+
+        .tag-stack{display:flex;flex-direction:column;gap:10px;}
+        .htag{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:12px 18px;font-size:0.85rem;font-weight:500;box-shadow:0 4px 12px rgba(0,0,0,.05);}
+
+        .divider{max-width:1080px;margin:0 auto;padding:0 24px;}
+        .divider::after{content:'';display:block;height:1px;background:var(--border);}
+
+        /* SECTIONS */
+        .aree{max-width:1080px;margin:0 auto;padding:48px 24px;}
+        .label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:20px;display:block;}
+        .aree-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+        .acard{border-radius:20px;padding:32px;position:relative;overflow:hidden;transition:0.3s;}
+        .acard:hover{transform:translateY(-4px);}
+        .c1{background:#D6EAF8;}.c2{background:#FDEBD0;}
+        .acard h3{font-size:1.2rem;font-weight:700;margin-bottom:10px;color:var(--ink);}
+        .acard p{font-size:0.92rem;color:var(--muted);line-height:1.6;}
+
+        /* JOIN CARD */
+        .join{max-width:1080px;margin:0 auto;padding:0 24px 24px;}
+        .join-card{background:#D5F5E3;border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
+        .join-text h2{font-size:1.7rem;font-weight:800;color:var(--ink);line-height:1.1;letter-spacing:-0.02em;margin-bottom:12px;}
+        .join-text p{font-size:1rem;color:rgba(0,0,0,.65);line-height:1.6;max-width:520px;}
+        .btn-dark{background:#1B4F72;color:#fff;}
+
+        /* CFP */
+        .cfp-section{max-width:1080px;margin:0 auto;padding:24px 24px 56px;}
+        .cfp-card{background:#F2F3F4;border:2px solid var(--border);border-radius:24px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
+        .cfp-tag{display:inline-block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--violet);margin-bottom:12px;}
+        .cfp-card h2{font-size:1.8rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;}
+        .cfp-card p{font-size:1rem;color:var(--muted);max-width:600px;line-height:1.6;}
+        .btn-violet{background:#1E8449;color:#fff;}
+
+                
+        @media(max-width:768px){
+                                                            
+            .hero,.aree-grid,.join-card,.cfp-card{grid-template-columns:1fr;}
+            .hero-right{display:none;}
+            .hero{padding:36px 20px;}
+            .join-card,.cfp-card{padding:30px;}
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav"></nav>
+
+<section class="hero">
+    <div class="hero-left">
+        <span class="hero-badge-home">Associazione APS</span>
+        <h1>Formebrevi</h1>
+        <p class="hero-sub">Percorsi formativi, dialogo filosofico e conoscenza pedagogica libera. Un laboratorio di pensiero aperto a tutti.</p>
+        <div class="hero-actions">
+            <a href="attivita.html" class="btn btn-fill">Le nostre attività</a>
+            <a href="chi-siamo.html" class="btn btn-outline">La nostra visione</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="tag-stack">
+            <div class="htag"><span>🎓</span> <strong>Educazione & Inclusione</strong></div>
+            <div class="htag"><span>💡</span> <strong>Dialogo Filosofico</strong></div>
+            <div class="htag"><span>🔬</span> <strong>Ricerca Pedagogica</strong></div>
+            <div class="htag"><span>🤝</span> <strong>Innovazione Sociale</strong></div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="aree">
+    <span class="label">Ambiti di intervento</span>
+    <div class="aree-grid">
+        <div class="acard c1">
+            <h3>Comunità ed Educazione</h3>
+            <p>Supportiamo scuole e famiglie con percorsi educativi che rispettano i tempi e le potenzialità di ogni individuo.</p>
+        </div>
+        <div class="acard c2">
+            <h3>Cultura e Conoscenza</h3>
+            <p>Colleghiamo la ricerca scientifica ai contesti del Terzo Settore attraverso la condivisione di saperi in accesso aperto.</p>
+        </div>
+    </div>
+</section>
+
+<section class="join">
+    <div class="join-card">
+        <div class="join-text">
+            <h2>Fai parte del progetto.</h2>
+            <p>Formebrevi è un'associazione di volontari. Entra a far parte della nostra comunità educativa e contribuisci a costruire cultura libera.</p>
+        </div>
+        <a href="iscriviti.html" class="btn btn-dark">Associati ora</a>
+    </div>
+</section>
+
+<section class="cfp-section">
+    <div class="cfp-card">
+        <div class="cfp-text">
+            <span class="cfp-tag">Call for Contributions</span>
+            <h2>Contribuisci alla ricerca</h2>
+            <p>Accogliamo contributi originali in ambito pedagogico e filosofico per alimentare un dibattito rigoroso e indipendente fuori dai circuiti commerciali.</p>
+        </div>
+        <a href="call-for-papers.html" class="btn btn-violet">Invia contributo →</a>
+    </div>
+</section>
+
+<footer>
+    <p><strong>Formebrevi APS</strong><br>
+    Via Michelangelo s.n., 93100 Caltanissetta<br>
+    C.F. 92064060855 · RUNTS n. 72338 del 07/11/2022</p>
+    <p style="margin-top:12px;"><a href="privacy.html" style="color:#7F8C8D;text-decoration:none;font-size:0.75rem;">Privacy & Cookie Policy</a></p>
+</footer>
+
+<script src="/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* Formebrevi APS — stile condiviso delle pagine "articolo" (rivista, font serif).
+   La navigazione (nav, hamburger, footer) arriva da common.css: qui restano
+   solo i contenuti tipografici dell'articolo. */
+
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --secondary: #555555;
+    --accent-soft-red: #7D3030;
+    --accent-hover: #5a2222;
+    --ivory-bg: #FEFCF3;
+    --ivory-border: #f2e8cf;
+    /* Uniformato al resto del sito: stesso sans-serif "Outfit" ovunque. */
+    --font-serif: var(--f);
+    --font-sans: var(--f);
+    --blue-main: #4a749a;
+    --blue-bg: #f4f7f9;
+    --teal-main: #4a8a7a;
+    --teal-bg: #f4f9f8;
+    --transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-serif);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1080px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    font-family: var(--font-sans);
+}
+footer strong {
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── ARTICOLO ── */
+.article-page { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.article-inner { max-width: 1000px; width: 100%; padding: 35px 25px 70px 25px; box-sizing: border-box; }
+.breadcrumb { font-family: var(--font-sans); font-size: 0.68rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 25px; }
+.breadcrumb a { color: var(--secondary); text-decoration: none; transition: var(--transition); }
+.breadcrumb a:hover { color: var(--accent-soft-red); }
+.breadcrumb span { margin: 0 8px; }
+.article-meta { font-family: var(--font-sans); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-soft-red); margin-bottom: 10px; display: block; }
+.article-title { font-family: var(--font-serif); font-size: 2rem; font-weight: 400; color: var(--text); line-height: 1.25; margin: 0 0 30px 0; border-left: 3px solid #eeeeee; padding-left: 20px; }
+.article-body { max-width: 700px; font-size: 1rem; line-height: 1.75; }
+.article-body p { margin-bottom: 1.2rem; }
+.article-body h3 { font-family: var(--font-sans); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--secondary); margin: 2rem 0 0.8rem; }
+.article-body strong { font-weight: bold; }
+.article-body em { font-style: italic; }
+.article-body ul, .article-body ol { margin: 0.8rem 0 0.8rem 1.5rem; }
+.article-body li { margin-bottom: 0.4rem; }
+.article-body blockquote { border-left: 3px solid #eeeeee; padding: 0.5rem 1.2rem; margin: 1.5rem 0; color: var(--secondary); font-style: italic; }
+.article-body a { color: var(--accent-soft-red); }
+.article-body img { max-width: 100%; height: auto; border-radius: 4px; margin: 1rem 0; }
+.back-link { display: inline-block; margin-top: 2.5rem; font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-soft-red); text-decoration: none; border-bottom: 1px solid rgba(125,48,48,0.3); padding-bottom: 2px; transition: var(--transition); }
+.back-link:hover { border-bottom-color: var(--accent-soft-red); }
+
+@media (max-width: 850px) {
+    .article-inner { padding: 25px 20px 50px 20px; }
+    .article-title { font-size: 1.5rem; }
+}
