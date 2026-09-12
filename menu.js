@@ -22,7 +22,6 @@
       <div class="nav-links" id="nmenu" role="navigation" aria-label="Menu principale">
         <a href="/index.html"          data-page="index.html">Home</a>
         <a href="/chi-siamo.html"      data-page="chi-siamo.html">Chi siamo</a>
-        <a href="/attivita.html"       data-page="attivita.html">Attività</a>
         <a href="/notizie.html"        data-page="notizie.html">Notizie</a>
         <a href="/risorse.html"        data-page="risorse.html">Risorse</a>
         <a href="/contatti.html"       data-page="contatti.html">Contatti</a>
@@ -36,7 +35,7 @@
   const PARENT_MAP = {
     'premio.html':          'chi-siamo.html',
     'edizioni.html':        'chi-siamo.html',
-    'call-for-papers.html': 'attivita.html',
+    'call-for-papers.html': null,
     'kalmly.html':           null,
     'privacy.html':          null
   };
