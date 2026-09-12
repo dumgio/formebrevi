@@ -37,6 +37,7 @@
     'premio.html':          'chi-siamo.html',
     'edizioni.html':        'chi-siamo.html',
     'call-for-papers.html': 'attivita.html',
+    'kalmly.html':           null,
     'privacy.html':          null
   };
 

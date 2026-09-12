@@ -70,16 +70,22 @@
         .ev-card{border-radius:24px;padding:36px;display:flex;flex-direction:column;}
         .ev-card.dialogo{background:#E8E9FA;}
         .ev-card.ricerca{background:#FBE9EE;}
+        .ev-card.kalmly{background:#D0F5E4;grid-column:1 / -1;border:2px solid #18B878;flex-direction:row;align-items:center;gap:32px;}
         .ev-tag{display:inline-block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;}
         .ev-card.dialogo .ev-tag{color:#4551D6;}
         .ev-card.ricerca .ev-tag{color:#C1547A;}
+        .ev-card.kalmly .ev-tag{color:#0A5C38;}
         .ev-card h2{font-size:1.4rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;}
         .ev-card p{font-size:0.94rem;color:var(--muted);line-height:1.6;flex-grow:1;margin-bottom:22px;}
+        .ev-card.kalmly p{margin-bottom:0;}
+        .ev-card.kalmly .ev-main{flex:1;}
         .ev-actions{display:flex;gap:10px;flex-wrap:wrap;}
         .btn-indaco{background:#4551D6;color:#fff;}
         .btn-indaco:hover{background:#333BAA;}
         .btn-honey{background:#C98A2E;color:#fff;}
         .btn-honey:hover{background:#9C6A1E;}
+        .btn-mint{background:#18B878;color:#fff;}
+        .btn-mint:hover{background:#0A5C38;}
 
 
         @media(max-width:768px){
@@ -88,6 +94,7 @@
             .hero-right{display:none;}
             .hero{padding:36px 20px;}
             .join-card{padding:30px;}
+            .ev-card.kalmly{flex-direction:column;align-items:stretch;padding:28px;}
         }
     </style>
 </head>
@@ -144,10 +151,21 @@
 <section class="evidenza">
     <span class="label">In evidenza</span>
     <div class="evidenza-grid">
+        <div class="ev-card kalmly">
+            <div class="ev-main">
+                <span class="ev-tag">App Gratuita</span>
+                <h2>Kalmly, per genitori ed educatori di bambini con ADHD</h2>
+                <p>Formebrevi APS ha realizzato Kalmly: un'app gratuita con strategie immediate per i momenti difficili e un coach quotidiano per affrontare l'ADHD nella vita di tutti i giorni. Funziona anche offline ed è a disposizione di tutti, senza account né costi.</p>
+            </div>
+            <div class="ev-actions">
+                <a href="https://kalmly.app" class="btn btn-mint" target="_blank" rel="noopener">Apri Kalmly →</a>
+                <a href="kalmly.html" class="btn btn-outline">Scopri di più</a>
+            </div>
+        </div>
         <div class="ev-card dialogo">
             <span class="ev-tag">Dialogo Filosofico</span>
             <h2>Uno spazio di dialogo aperto a tutti</h2>
-            <p>Formebrevi promuove il dialogo filosofico come pratica di crescita e di cura reciproca. Le sessioni sono gratuite per chi è associato — la quota annuale è di 10€ — e si possono prenotare in qualsiasi momento.</p>
+            <p>Formebrevi promuove il dialogo filosofico come pratica di crescita e di cura reciproca. Le sessioni si svolgono online e sono gratuite per chi è associato — la quota annuale è di 10€ — e si possono prenotare in qualsiasi momento.</p>
             <div class="ev-actions">
                 <a href="mailto:formebrevi@gmail.com?subject=Prenotazione%20sessione%20di%20Dialogo%20Filosofico" class="btn btn-honey">Prenota una sessione</a>
                 <a href="iscriviti.html" class="btn btn-outline">Iscriviti a Formebrevi</a>
