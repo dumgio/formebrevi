@@ -23,7 +23,7 @@
     <title>Formebrevi APS | Pedagogia, Philosophy e Ricerca Educativa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/common.css">
     <style>
                                         
@@ -32,7 +32,7 @@
         /* HERO */
         .hero{max-width:1080px;margin:0 auto;padding:64px 24px 56px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;animation:up .55s ease both;}
         .hero-left{display:flex;flex-direction:column;gap:14px;}
-        .hero-badge-home{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:#1E8449;border-radius:100px;padding:6px 14px;width:fit-content;}
+        .hero-badge-home{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:#4551D6;border-radius:100px;padding:6px 14px;width:fit-content;}
         .hero h1{font-size:clamp(2.8rem,8vw,5.2rem);font-weight:800;line-height:0.92;letter-spacing:-0.03em;color:var(--ink);}
         .hero-sub{font-size:1.1rem;color:var(--muted);line-height:1.55;max-width:380px;margin-top:10px;}
         .hero-actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
@@ -53,32 +53,41 @@
         .aree-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
         .acard{border-radius:20px;padding:32px;position:relative;overflow:hidden;transition:0.3s;}
         .acard:hover{transform:translateY(-4px);}
-        .c1{background:#D6EAF8;}.c2{background:#FDEBD0;}
+        .c1{background:#E1F0FA;}.c2{background:#FDF0D9;}
         .acard h3{font-size:1.2rem;font-weight:700;margin-bottom:10px;color:var(--ink);}
         .acard p{font-size:0.92rem;color:var(--muted);line-height:1.6;}
 
         /* JOIN CARD */
         .join{max-width:1080px;margin:0 auto;padding:0 24px 24px;}
-        .join-card{background:#D5F5E3;border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
+        .join-card{background:#E1F5EA;border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
         .join-text h2{font-size:1.7rem;font-weight:800;color:var(--ink);line-height:1.1;letter-spacing:-0.02em;margin-bottom:12px;}
         .join-text p{font-size:1rem;color:rgba(0,0,0,.65);line-height:1.6;max-width:520px;}
-        .btn-dark{background:#1B4F72;color:#fff;}
+        .btn-dark{background:#333BAA;color:#fff;}
 
-        /* CFP */
-        .cfp-section{max-width:1080px;margin:0 auto;padding:24px 24px 56px;}
-        .cfp-card{background:#F2F3F4;border:2px solid var(--border);border-radius:24px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
-        .cfp-tag{display:inline-block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--violet);margin-bottom:12px;}
-        .cfp-card h2{font-size:1.8rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;}
-        .cfp-card p{font-size:1rem;color:var(--muted);max-width:600px;line-height:1.6;}
-        .btn-violet{background:#1E8449;color:#fff;}
+        /* IN EVIDENZA */
+        .evidenza{max-width:1080px;margin:0 auto;padding:24px 24px 56px;}
+        .evidenza-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+        .ev-card{border-radius:24px;padding:36px;display:flex;flex-direction:column;}
+        .ev-card.dialogo{background:#E8E9FA;}
+        .ev-card.ricerca{background:#FBE9EE;}
+        .ev-tag{display:inline-block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;}
+        .ev-card.dialogo .ev-tag{color:#4551D6;}
+        .ev-card.ricerca .ev-tag{color:#C1547A;}
+        .ev-card h2{font-size:1.4rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;}
+        .ev-card p{font-size:0.94rem;color:var(--muted);line-height:1.6;flex-grow:1;margin-bottom:22px;}
+        .ev-actions{display:flex;gap:10px;flex-wrap:wrap;}
+        .btn-indaco{background:#4551D6;color:#fff;}
+        .btn-indaco:hover{background:#333BAA;}
+        .btn-honey{background:#C98A2E;color:#fff;}
+        .btn-honey:hover{background:#9C6A1E;}
 
-                
+
         @media(max-width:768px){
-                                                            
-            .hero,.aree-grid,.join-card,.cfp-card{grid-template-columns:1fr;}
+
+            .hero,.aree-grid,.join-card,.evidenza-grid{grid-template-columns:1fr;}
             .hero-right{display:none;}
             .hero{padding:36px 20px;}
-            .join-card,.cfp-card{padding:30px;}
+            .join-card{padding:30px;}
         }
     </style>
 </head>
@@ -132,14 +141,26 @@
     </div>
 </section>
 
-<section class="cfp-section">
-    <div class="cfp-card">
-        <div class="cfp-text">
-            <span class="cfp-tag">Call for Contributions</span>
+<section class="evidenza">
+    <span class="label">In evidenza</span>
+    <div class="evidenza-grid">
+        <div class="ev-card dialogo">
+            <span class="ev-tag">Dialogo Filosofico</span>
+            <h2>Uno spazio di dialogo aperto a tutti</h2>
+            <p>Formebrevi promuove il dialogo filosofico come pratica di crescita e di cura reciproca. Le sessioni sono gratuite per chi è associato — la quota annuale è di 10€ — e si possono prenotare in qualsiasi momento.</p>
+            <div class="ev-actions">
+                <a href="mailto:formebrevi@gmail.com?subject=Prenotazione%20sessione%20di%20Dialogo%20Filosofico" class="btn btn-honey">Prenota una sessione</a>
+                <a href="iscriviti.html" class="btn btn-outline">Iscriviti a Formebrevi</a>
+            </div>
+        </div>
+        <div class="ev-card ricerca">
+            <span class="ev-tag">Call for Contributions</span>
             <h2>Contribuisci alla ricerca</h2>
             <p>Accogliamo contributi originali in ambito pedagogico e filosofico per alimentare un dibattito rigoroso e indipendente fuori dai circuiti commerciali.</p>
+            <div class="ev-actions">
+                <a href="call-for-papers.html" class="btn btn-indaco">Invia contributo →</a>
+            </div>
         </div>
-        <a href="call-for-papers.html" class="btn btn-violet">Invia contributo →</a>
     </div>
 </section>
 
@@ -147,7 +168,7 @@
     <p><strong>Formebrevi APS</strong><br>
     Via Michelangelo s.n., 93100 Caltanissetta<br>
     C.F. 92064060855 · RUNTS n. 72338 del 07/11/2022</p>
-    <p style="margin-top:12px;"><a href="privacy.html" style="color:#7F8C8D;text-decoration:none;font-size:0.75rem;">Privacy & Cookie Policy</a></p>
+    <p style="margin-top:12px;"><a href="privacy.html" style="color:#5B5F6B;text-decoration:none;font-size:0.75rem;">Privacy & Cookie Policy</a></p>
 </footer>
 
 <script src="/menu.js"></script>

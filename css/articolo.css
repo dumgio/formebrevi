@@ -3,15 +3,15 @@
    solo i contenuti tipografici dell'articolo. */
 
 :root {
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --secondary: #555555;
-    --accent: #1E8449;
-    --accent-hover: #14532d;
-    --ivory-bg: #FEFCF3;
-    --ivory-border: #f2e8cf;
-    /* Uniformato al resto del sito: stesso sans-serif "Outfit" ovunque. */
-    --font-serif: var(--f);
+    --bg: #FAFAF8;
+    --text: #1B1D22;
+    --secondary: #5B5F6B;
+    --accent: #4551D6;
+    --accent-hover: #333BAA;
+    --ivory-bg: #FDF6E8;
+    --ivory-border: #F0DDB0;
+    /* Titoli in Fraunces (serif), testo in Manrope (sans): la stessa coppia usata in tutto il sito. */
+    --font-serif: var(--f-display);
     --font-sans: var(--f);
     --blue-main: #4a749a;
     --blue-bg: #f4f7f9;
@@ -51,7 +51,7 @@ footer strong {
 .breadcrumb a:hover { color: var(--accent); }
 .breadcrumb span { margin: 0 8px; }
 .article-meta { font-family: var(--font-sans); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 10px; display: block; }
-.article-title { font-family: var(--font-serif); font-size: 2rem; font-weight: 400; color: var(--text); line-height: 1.25; margin: 0 0 30px 0; border-left: 3px solid #eeeeee; padding-left: 20px; }
+.article-title { font-family: var(--font-serif); font-size: 2rem; font-weight: 400; color: var(--text); line-height: 1.25; margin: 0 0 30px 0; border-left: 3px solid var(--border); padding-left: 20px; }
 .article-body { max-width: 700px; font-size: 1rem; line-height: 1.75; }
 .article-body p { margin-bottom: 1.2rem; }
 .article-body h3 { font-family: var(--font-sans); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--secondary); margin: 2rem 0 0.8rem; }
@@ -59,10 +59,10 @@ footer strong {
 .article-body em { font-style: italic; }
 .article-body ul, .article-body ol { margin: 0.8rem 0 0.8rem 1.5rem; }
 .article-body li { margin-bottom: 0.4rem; }
-.article-body blockquote { border-left: 3px solid #eeeeee; padding: 0.5rem 1.2rem; margin: 1.5rem 0; color: var(--secondary); font-style: italic; }
+.article-body blockquote { border-left: 3px solid var(--border); padding: 0.5rem 1.2rem; margin: 1.5rem 0; color: var(--secondary); font-style: italic; }
 .article-body a { color: var(--accent); }
 .article-body img { max-width: 100%; height: auto; border-radius: 4px; margin: 1rem 0; }
-.back-link { display: inline-block; margin-top: 2.5rem; font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(30,132,73,0.3); padding-bottom: 2px; transition: var(--transition); }
+.back-link { display: inline-block; margin-top: 2.5rem; font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(69,81,214,0.3); padding-bottom: 2px; transition: var(--transition); }
 .back-link:hover { border-bottom-color: var(--accent); }
 
 @media (max-width: 850px) {
