@@ -2,14 +2,21 @@
    Caricato da tutte le pagine del sito principale e dagli articoli. */
 
 :root{
-    --white:#FAFAF8;--off:#E8E9FA;--ink:#1B1D22;--muted:#5B5F6B;
-    --lime:#E8E9FA;--lime-dk:#4551D6;
-    --violet:#4551D6;--sky:#5B5F6B;--coral:#C98A2E;--border:#E4E0D6;
-    --blue-dark:#1B1D22;--blue-mid:#5B5F6B;--blue-light:#E8E9FA;
-    --green-dark:#4551D6;--green-mid:#4551D6;--green-light:#E8E9FA;
-    --orange-light:#FDF0D9;--orange-dark:#C98A2E;
-    --grey-light:#F2F0EA;--grey-dark:#1B1D22;--grey-mid:#5B5F6B;
-    --accent:#4551D6;--accent-dark:#333BAA;
+    --white:#F6F0E6;--off:#F1DCC4;--ink:#2A2018;--muted:#6E5D4E;
+    --lime:#F1DCC4;--lime-dk:#AD5537;
+    --violet:#AD5537;--sky:#6E5D4E;--coral:#93672A;--border:#E5D9C4;
+    --blue-dark:#2A2018;--blue-mid:#6E5D4E;--blue-light:#DCE4E4;
+    --green-dark:#374F31;--green-mid:#4C6B45;--green-light:#DEE7D3;
+    --orange-light:#F5E7C4;--orange-dark:#93672A;
+    --grey-light:#E9E1D2;--grey-dark:#2A2018;--grey-mid:#6E5D4E;
+    --accent:#AD5537;--accent-dark:#833D26;
+    --card-white:#FFFDF9;
+    --terracotta:#AD5537;--terracotta-dark:#833D26;--clay-light:#F1DCC4;
+    --ochre:#93672A;--ochre-dark:#6E4C1C;--ochre-light:#F5E7C4;
+    --sage:#4C6B45;--sage-dark:#374F31;--sage-light:#DEE7D3;
+    --rose-light:#F3DBD8;--rose-dark:#7A3730;
+    --slate-light:#DCE4E4;--slate-dark:#35494C;
+    --sand:#E9E1D2;
     --f:'Manrope',sans-serif;--f-display:'Fraunces',serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -24,10 +31,10 @@ h1,h2,h3,h4{font-family:var(--f-display);text-wrap:balance;}
 .nav-logo img{height:30px;width:auto;display:block;max-height:30px;}
 .nav-links{display:flex;align-items:center;gap:4px;}
 .nav-links a{font-size:0.86rem;font-weight:500;letter-spacing:0.01em;color:var(--muted);text-decoration:none;padding:7px 13px;border-radius:6px;transition:color .18s,background .18s;white-space:nowrap;}
-.nav-links a:hover{color:#1B1D22;background:#E8E9FA;}
-.nav-links a.cur{color:#1B1D22;font-weight:600;}
-.nav-cta{font-size:0.86rem!important;font-weight:600!important;color:#ffffff!important;background:#4551D6!important;padding:8px 18px!important;border-radius:100px!important;}
-.nav-cta:hover{background:#333BAA!important;color:#fff!important;}
+.nav-links a:hover{color:#2A2018;background:#F1DCC4;}
+.nav-links a.cur{color:#2A2018;font-weight:600;}
+.nav-cta{font-size:0.86rem!important;font-weight:600!important;color:#ffffff!important;background:#AD5537!important;padding:8px 18px!important;border-radius:100px!important;}
+.nav-cta:hover{background:#833D26!important;color:#fff!important;}
 
 /* HAMBURGER */
 .hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:4px;}

@@ -57,11 +57,11 @@
         /* HERO */
         .hero{max-width:1080px;margin:0 auto;padding:64px 24px 56px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;animation:up .55s ease both;}
         .hero-left{display:flex;flex-direction:column;gap:14px;}
-        .hero-badge-home{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:#4551D6;border-radius:100px;padding:6px 14px;width:fit-content;}
+        .hero-badge-home{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:#AD5537;border-radius:100px;padding:6px 14px;width:fit-content;}
         .hero h1{font-size:clamp(2.8rem,8vw,5.2rem);font-weight:800;line-height:0.92;letter-spacing:-0.03em;color:var(--ink);}
         .hero-sub{font-size:1.1rem;color:var(--muted);line-height:1.55;max-width:380px;margin-top:10px;}
         .hero-actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
-        
+
         .btn{display:inline-block;font-size:0.82rem;font-weight:600;text-decoration:none;padding:14px 28px;border-radius:100px;transition:0.2s;}
         .btn-fill{background:var(--ink);color:var(--white);}
         .btn-outline{border:1.5px solid var(--border);color:var(--ink);}
@@ -78,39 +78,41 @@
         .aree-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
         .acard{border-radius:20px;padding:32px;position:relative;overflow:hidden;transition:0.3s;}
         .acard:hover{transform:translateY(-4px);}
-        .c1{background:#E1F0FA;}.c2{background:#FDF0D9;}
+        .c1{background:#F1DCC4;}.c2{background:#F5E7C4;}
         .acard h3{font-size:1.2rem;font-weight:700;margin-bottom:10px;color:var(--ink);}
         .acard p{font-size:0.92rem;color:var(--muted);line-height:1.6;}
 
         /* JOIN CARD */
         .join{max-width:1080px;margin:0 auto;padding:0 24px 24px;}
-        .join-card{background:#F2F0EA;border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
+        .join-card{background:#E9E1D2;border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
         .join-text h2{font-size:1.7rem;font-weight:800;color:var(--ink);line-height:1.1;letter-spacing:-0.02em;margin-bottom:12px;}
         .join-text p{font-size:1rem;color:rgba(0,0,0,.65);line-height:1.6;max-width:520px;}
-        .btn-dark{background:#333BAA;color:#fff;}
+        .btn-dark{background:#833D26;color:#fff;}
 
         /* IN EVIDENZA */
         .evidenza{max-width:1080px;margin:0 auto;padding:24px 24px 56px;}
         .evidenza-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
         .ev-card{border-radius:24px;padding:36px;display:flex;flex-direction:column;}
-        .ev-card.dialogo{background:#E8E9FA;}
-        .ev-card.ricerca{background:#FBE9EE;}
-        .ev-card.kalmly{background:#D0F5E4;grid-column:1 / -1;border:2px solid #18B878;flex-direction:row;align-items:center;gap:32px;}
+        .ev-card.dialogo{background:#F3DBD8;}
+        .ev-card.ricerca{background:#DCE4E4;}
+        .ev-card.kalmly{background:#DEE7D3;grid-column:1 / -1;border:2px solid #4C6B45;flex-direction:row;align-items:center;gap:32px;}
         .ev-tag{display:inline-block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;}
-        .ev-card.dialogo .ev-tag{color:#4551D6;}
-        .ev-card.ricerca .ev-tag{color:#C1547A;}
-        .ev-card.kalmly .ev-tag{color:#0A5C38;}
+        .ev-card.dialogo .ev-tag{color:#7A3730;}
+        .ev-card.ricerca .ev-tag{color:#35494C;}
+        .ev-card.kalmly .ev-tag{color:#374F31;}
         .ev-card h2{font-size:1.4rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;}
         .ev-card p{font-size:0.94rem;color:var(--muted);line-height:1.6;flex-grow:1;margin-bottom:22px;}
         .ev-card.kalmly p{margin-bottom:0;}
         .ev-card.kalmly .ev-main{flex:1;}
         .ev-actions{display:flex;gap:10px;flex-wrap:wrap;}
-        .btn-indaco{background:#4551D6;color:#fff;}
-        .btn-indaco:hover{background:#333BAA;}
-        .btn-honey{background:#C98A2E;color:#fff;}
-        .btn-honey:hover{background:#9C6A1E;}
-        .btn-mint{background:#18B878;color:#fff;}
-        .btn-mint:hover{background:#0A5C38;}
+        .btn-terracotta{background:#AD5537;color:#fff;}
+        .btn-terracotta:hover{background:#833D26;}
+        .btn-rose{background:#7A3730;color:#fff;}
+        .btn-rose:hover{background:#5f2b26;}
+        .btn-slate{background:#35494C;color:#fff;}
+        .btn-slate:hover{background:#26363a;}
+        .btn-sage{background:#4C6B45;color:#fff;}
+        .btn-sage:hover{background:#374F31;}
 
 
         @media(max-width:768px){
@@ -182,8 +184,7 @@
                 <p>Formebrevi APS ha realizzato Kalmly: un'app gratuita con strategie immediate per i momenti difficili e un coach quotidiano per affrontare l'ADHD nella vita di tutti i giorni. Funziona anche offline ed è a disposizione di tutti, senza account né costi.</p>
             </div>
             <div class="ev-actions">
-                <a href="https://kalmly.app" class="btn btn-mint" target="_blank" rel="noopener">Apri Kalmly →</a>
-                <a href="kalmly.html" class="btn btn-outline">Scopri di più</a>
+                <a href="kalmly.html" class="btn btn-sage">Scopri di più</a>
             </div>
         </div>
         <div class="ev-card dialogo">
@@ -191,7 +192,7 @@
             <h2>Uno spazio di dialogo aperto a tutti</h2>
             <p>Formebrevi promuove il dialogo filosofico come pratica di crescita e di cura reciproca. Le sessioni si svolgono online e sono gratuite per chi è associato — la quota annuale è di 10€ — e si possono prenotare in qualsiasi momento.</p>
             <div class="ev-actions">
-                <a href="mailto:formebrevi@gmail.com?subject=Prenotazione%20sessione%20di%20Dialogo%20Filosofico" class="btn btn-honey">Prenota una sessione</a>
+                <a href="mailto:formebrevi@gmail.com?subject=Prenotazione%20sessione%20di%20Dialogo%20Filosofico" class="btn btn-rose">Prenota una sessione</a>
                 <a href="iscriviti.html" class="btn btn-outline">Iscriviti a Formebrevi</a>
             </div>
         </div>
@@ -200,7 +201,7 @@
             <h2>Contribuisci alla ricerca</h2>
             <p>Accogliamo contributi originali in ambito pedagogico e filosofico per alimentare un dibattito rigoroso e indipendente fuori dai circuiti commerciali.</p>
             <div class="ev-actions">
-                <a href="call-for-papers.html" class="btn btn-indaco">Invia contributo →</a>
+                <a href="call-for-papers.html" class="btn btn-slate">Invia contributo →</a>
             </div>
         </div>
     </div>
@@ -210,7 +211,7 @@
     <p><strong>Formebrevi APS</strong><br>
     Via Michelangelo s.n., 93100 Caltanissetta<br>
     C.F. 92064060855 · RUNTS n. 72338 del 07/11/2022</p>
-    <p style="margin-top:12px;"><a href="privacy.html" style="color:#5B5F6B;text-decoration:none;font-size:0.75rem;">Privacy & Cookie Policy</a></p>
+    <p style="margin-top:12px;"><a href="privacy.html" style="color:#6E5D4E;text-decoration:none;font-size:0.75rem;">Privacy & Cookie Policy</a></p>
 </footer>
 
 <script src="/menu.js"></script>
