@@ -24,6 +24,7 @@
         <a href="/chi-siamo.html"      data-page="chi-siamo.html">Chi siamo</a>
         <a href="/notizie.html"        data-page="notizie.html">Notizie</a>
         <a href="/risorse.html"        data-page="risorse.html">Risorse</a>
+        <a href="/corsi.html"          data-page="corsi.html">Corsi</a>
         <a href="/contatti.html"       data-page="contatti.html">Contatti</a>
         <a href="/iscriviti.html"      data-page="iscriviti.html" class="nav-cta">Associati</a>
       </div>
