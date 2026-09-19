@@ -43,6 +43,7 @@
         .block-item{padding:36px 0;border-bottom:1px solid var(--border);}
         .block-item:nth-child(odd){padding-right:40px;border-right:1px solid var(--border);}
         .block-item:nth-child(even){padding-left:40px;}
+        .block-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);display:block;margin-bottom:10px;}
         .block-item h2{font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.25;}
         .block-item p{font-size:0.95rem;color:var(--muted);line-height:1.7;}
 
@@ -53,6 +54,8 @@
         .step{background:rgba(255,255,255,0.7);border-radius:12px;padding:20px;}
         .step-num{font-size:1.4rem;font-weight:800;color:#374F31;margin-bottom:8px;}
         .step p{font-size:0.85rem;color:var(--muted);line-height:1.5;margin:0;}
+        .step a{color:#833D26;text-decoration:none;}
+        .step a:hover{opacity:.75;}
         .membership-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid rgba(0,0,0,0.1);flex-wrap:wrap;gap:16px;}
         .btn{display:inline-block;font-size:0.82rem;font-weight:600;text-decoration:none;padding:13px 26px;border-radius:100px;transition:0.2s;}
         .btn-dark{background:#833D26;color:#fff;}
@@ -62,7 +65,9 @@
         .teaser-card{border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:12px;position:relative;}
         .teaser-card.coral{background:#F5E7C4;}
         .teaser-card.sky{background:#DCE4E4;}
-        .teaser-card.teaser-tag{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);}
+        .teaser-card.sage{background:#DEE7D3;grid-column:1/-1;}
+        .teaser-card.sage .teaser-link{color:#35494C;}
+        .teaser-card .teaser-tag{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);}
         .teaser-card h3{font-size:1.2rem;font-weight:700;color:var(--ink);}
         .teaser-card p{font-size:0.92rem;color:var(--muted);line-height:1.65;flex-grow:1;}
         .teaser-link{font-size:0.82rem;font-weight:700;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
@@ -129,6 +134,12 @@
 <section class="teasers-section">
     <span class="section-label">Eredità Culturale</span>
     <div class="teasers-grid">
+        <div class="teaser-card sage">
+            <span class="teaser-tag">Dal 2015</span>
+            <h3>La nostra storia</h3>
+            <p>Il piccolo manifesto e le tappe di Formebrevi: dalla cultura del libro e del dialogo alla filosofia e al Terzo Settore.</p>
+            <a href="storia.html" class="teaser-link">Percorri la storia →</a>
+        </div>
         <div class="teaser-card coral">
             <span class="teaser-tag">Storia editoriale</span>
             <h3>Formebrevi Edizioni</h3>

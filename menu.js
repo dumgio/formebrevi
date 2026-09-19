@@ -35,6 +35,7 @@
      ───────────────────────────────────────────── */
   const PARENT_MAP = {
     'premio.html':          'chi-siamo.html',
+    'storia.html':          'chi-siamo.html',
     'edizioni.html':        'chi-siamo.html',
     'call-for-papers.html': null,
     'kalmly.html':           null,
