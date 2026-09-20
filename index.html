@@ -105,6 +105,20 @@
         .ev-card.kalmly p{margin-bottom:0;}
         .ev-card.kalmly .ev-main{flex:1;}
         .ev-actions{display:flex;gap:10px;flex-wrap:wrap;}
+
+        /* APP GRATUITE */
+        .app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:44px;}
+        .app-card{border-radius:24px;padding:30px;display:flex;flex-direction:column;border:2px solid transparent;}
+        .app-card.kalmly{background:#DEE7D3;border-color:#4C6B45;}
+        .app-card.dialogo-app{background:#F3DBD8;border-color:#7A3730;}
+        .app-card.stoicismo{background:#DCE4E4;border-color:#35494C;}
+        .app-card .ev-tag{margin-bottom:10px;}
+        .app-card.kalmly .ev-tag{color:#374F31;}
+        .app-card.dialogo-app .ev-tag{color:#7A3730;}
+        .app-card.stoicismo .ev-tag{color:#35494C;}
+        .app-card h3{font-size:1.5rem;font-weight:800;letter-spacing:-0.02em;line-height:1.1;margin-bottom:6px;}
+        .app-card .app-per{font-size:.88rem;font-weight:600;color:var(--ink);margin-bottom:12px;flex-grow:0;min-height:2.7em;}
+        .app-card p{font-size:0.92rem;color:var(--muted);line-height:1.55;flex-grow:1;margin-bottom:20px;}
         .btn-terracotta{background:#AD5537;color:#fff;}
         .btn-terracotta:hover{background:#833D26;}
         .btn-rose{background:#7A3730;color:#fff;}
@@ -121,7 +135,8 @@
             .hero-right{display:none;}
             .hero{padding:36px 20px;}
             .join-card{padding:30px;}
-            .ev-card.kalmly{flex-direction:column;align-items:stretch;padding:28px;}
+            .app-grid{grid-template-columns:1fr;}
+            .app-card .app-per{min-height:0;}
         }
     </style>
 </head>
@@ -174,39 +189,33 @@
     </div>
 </section>
 
+<section class="evidenza" style="padding-bottom:0">
+    <span class="label">App gratuite</span>
+    <div class="app-grid">
+        <div class="app-card kalmly">
+            <h3>Kalmly</h3>
+            <p class="app-per">Per genitori ed educatori di bambini con ADHD</p>
+            <p>Strategie immediate per i momenti difficili e un coach quotidiano per affrontare l'ADHD nella vita di tutti i giorni. Funziona anche senza connessione.</p>
+            <div class="ev-actions"><a href="kalmly.html" class="btn btn-sage">Scopri di più</a></div>
+        </div>
+        <div class="app-card dialogo-app">
+            <h3>Dialogo</h3>
+            <p class="app-per">Per chi conduce un dialogo filosofico</p>
+            <p>Guida un incontro in cinque fasi, con la domanda, i turni di parola, i rilanci e il tempo sempre a portata di mano. Funziona anche senza connessione.</p>
+            <div class="ev-actions"><a href="https://dialogo.formebrevi.it" class="btn btn-rose">Apri Dialogo</a></div>
+        </div>
+        <div class="app-card stoicismo">
+            <h3>Stoicismo quotidiano</h3>
+            <p class="app-per">Esercizi per i momenti difficili</p>
+            <p>Esercizi guidati tratti dalla sapienza degli stoici antichi, per quando sei in ansia, arrabbiato o sopraffatto. Funziona senza connessione e senza account.</p>
+            <div class="ev-actions"><a href="https://stoicismo.formebrevi.it" class="btn btn-slate">Apri l'app</a></div>
+        </div>
+    </div>
+</section>
+
 <section class="evidenza">
     <span class="label">In evidenza</span>
     <div class="evidenza-grid">
-        <div class="ev-card kalmly">
-            <div class="ev-main">
-                <span class="ev-tag">App Gratuita</span>
-                <h2>Kalmly, per genitori ed educatori di bambini con ADHD</h2>
-                <p>Formebrevi APS ha realizzato Kalmly: un'app gratuita con strategie immediate per i momenti difficili e un coach quotidiano per affrontare l'ADHD nella vita di tutti i giorni. Funziona anche offline ed è a disposizione di tutti, senza account né costi.</p>
-            </div>
-            <div class="ev-actions">
-                <a href="kalmly.html" class="btn btn-sage">Scopri di più</a>
-            </div>
-        </div>
-        <div class="ev-card kalmly">
-            <div class="ev-main">
-                <span class="ev-tag">App Gratuita</span>
-                <h2>Dialogo, per chi conduce un dialogo filosofico</h2>
-                <p>Formebrevi APS ha realizzato Dialogo: un'app gratuita che guida un incontro di dialogo filosofico in cinque fasi, con la domanda, i turni di parola, i rilanci e il tempo sempre a portata di mano. Funziona anche senza connessione.</p>
-            </div>
-            <div class="ev-actions">
-                <a href="https://dialogo.formebrevi.it" class="btn btn-sage">Apri Dialogo</a>
-            </div>
-        </div>
-        <div class="ev-card kalmly">
-            <div class="ev-main">
-                <span class="ev-tag">App Gratuita</span>
-                <h2>Stoicismo quotidiano, esercizi per i momenti difficili</h2>
-                <p>Formebrevi APS ha realizzato Stoicismo quotidiano: un'app gratuita che ti guida, passo dopo passo, con esercizi tratti dalla sapienza degli stoici antichi. Quando sei in ansia, arrabbiato o sopraffatto, e anche per studiare lo stoicismo con calma. Funziona senza connessione e senza account.</p>
-            </div>
-            <div class="ev-actions">
-                <a href="https://stoicismo.formebrevi.it" class="btn btn-sage">Apri Stoicismo quotidiano</a>
-            </div>
-        </div>
         <div class="ev-card dialogo">
             <span class="ev-tag">Dialogo Filosofico</span>
             <h2>Uno spazio di dialogo aperto a tutti</h2>
