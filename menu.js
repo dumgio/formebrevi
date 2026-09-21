@@ -39,6 +39,8 @@
     'edizioni.html':        'chi-siamo.html',
     'call-for-papers.html': null,
     'kalmly.html':           null,
+    'stoicismo.html':        null,
+    'dialogo.html':          null,
     'privacy.html':          null
   };
 
