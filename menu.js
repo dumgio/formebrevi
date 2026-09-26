@@ -21,10 +21,10 @@
       </button>
       <div class="nav-links" id="nmenu" role="navigation" aria-label="Menu principale">
         <a href="/index.html"          data-page="index.html">Home</a>
+        <a href="/filosofia.html"      data-page="filosofia.html">Filosofia e scrittura</a>
+        <a href="/chi-educa.html"      data-page="chi-educa.html">Chi educa</a>
+        <a href="/famiglie.html"       data-page="famiglie.html">Famiglie e ragazzi</a>
         <a href="/chi-siamo.html"      data-page="chi-siamo.html">Chi siamo</a>
-        <a href="/notizie.html"        data-page="notizie.html">Notizie</a>
-        <a href="/risorse.html"        data-page="risorse.html">Risorse</a>
-        <a href="/corsi.html"          data-page="corsi.html">Corsi</a>
         <a href="/contatti.html"       data-page="contatti.html">Contatti</a>
         <a href="/iscriviti.html"      data-page="iscriviti.html" class="nav-cta">Associati</a>
       </div>
@@ -37,9 +37,12 @@
     'premio.html':          'chi-siamo.html',
     'storia.html':          'chi-siamo.html',
     'edizioni.html':        'chi-siamo.html',
-    'call-for-papers.html': null,
-    'kalmly.html':           null,
-    'stoicismo.html':        null,
+    'notizie.html':         'chi-siamo.html',
+    'call-for-papers.html': 'filosofia.html',
+    'kalmly.html':          'famiglie.html',
+    'stoicismo.html':       'filosofia.html',
+    'corsi.html':            null,
+    'risorse.html':          null,
     'dialogo.html':          null,
     'privacy.html':          null
   };
@@ -59,7 +62,7 @@
 
     var activePage;
     if (path.indexOf('/articoli/') !== -1) {
-      activePage = 'notizie.html';
+      activePage = 'chi-siamo.html';
     } else if (Object.prototype.hasOwnProperty.call(PARENT_MAP, page)) {
       activePage = PARENT_MAP[page];
     } else {

@@ -75,11 +75,18 @@
         /* SECTIONS */
         .aree{max-width:1080px;margin:0 auto;padding:48px 24px;}
         .label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:20px;display:block;}
-        .aree-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+        .aree-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
         .acard{border-radius:20px;padding:32px;position:relative;overflow:hidden;transition:0.3s;}
         .acard:hover{transform:translateY(-4px);}
-        .c1{background:#F1DCC4;}.c2{background:#F5E7C4;}
-        .acard h3{font-size:1.2rem;font-weight:700;margin-bottom:10px;color:var(--ink);}
+        .c1{background:#DCE4E4;}.c2{background:#F5E7C4;}.c3{background:#DEE7D3;}
+        .acard{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;}
+        .acard-per{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;}
+        .c1 .acard-per,.c1 .acard-go{color:#35494C;}.c2 .acard-per,.c2 .acard-go{color:#6E4C1C;}.c3 .acard-per,.c3 .acard-go{color:#374F31;}
+        .acard p{flex-grow:1;}
+        .acard-go{font-size:0.82rem;font-weight:700;margin-top:6px;}
+        a.htag{text-decoration:none;color:var(--ink);transition:transform .2s;}
+        a.htag:hover{transform:translateX(4px);}
+        .acard h3{font-size:1.3rem;font-weight:700;color:var(--ink);}
         .acard p{font-size:0.92rem;color:var(--muted);line-height:1.6;}
 
         /* JOIN CARD */
@@ -146,17 +153,16 @@
     <div class="hero-left">
         <span class="hero-badge-home">Associazione di promozione sociale</span>
         <h1>Formebrevi</h1>
-        <p class="hero-sub">Percorsi formativi, dialogo filosofico e conoscenza pedagogica libera. Un laboratorio di pensiero aperto a tutti.</p>
+        <p class="hero-sub">La filosofia e il pensiero critico nell'educazione. Per chi vuole pensare, per chi educa, per le famiglie. Con strumenti brevi, gratuiti e aperti a tutti.</p>
         <div class="hero-actions">
             <a href="chi-siamo.html" class="btn btn-fill">La nostra visione</a>
         </div>
     </div>
     <div class="hero-right">
         <div class="tag-stack">
-            <div class="htag"><span>🎓</span> <strong>Educazione e Inclusione</strong></div>
-            <div class="htag"><span>💡</span> <strong>Dialogo Filosofico</strong></div>
-            <div class="htag"><span>🔬</span> <strong>Ricerca Pedagogica</strong></div>
-            <div class="htag"><span>🤝</span> <strong>Innovazione Sociale</strong></div>
+            <a class="htag" href="filosofia.html"><span>🖋️</span> <strong>Filosofia e scrittura</strong></a>
+            <a class="htag" href="chi-educa.html"><span>🌱</span> <strong>Chi educa</strong></a>
+            <a class="htag" href="famiglie.html"><span>🧭</span> <strong>Famiglie e ragazzi</strong></a>
         </div>
     </div>
 </section>
@@ -164,16 +170,26 @@
 <div class="divider"></div>
 
 <section class="aree">
-    <span class="label">Ambiti di intervento</span>
+    <span class="label">Le nostre sezioni</span>
     <div class="aree-grid">
-        <div class="acard c1">
-            <h3>Comunità ed Educazione</h3>
-            <p>Promuoviamo l'educazione, l'inclusione sociale e la partecipazione attiva, per lo sviluppo integrale della persona in ogni fase della vita.</p>
-        </div>
-        <div class="acard c2">
-            <h3>Cultura e Conoscenza</h3>
-            <p>Costruiamo un patrimonio condiviso di conoscenze, in accesso aperto, a servizio del Terzo Settore. Promuoviamo la lettura e la scrittura come strumenti di elaborazione personale e di partecipazione culturale.</p>
-        </div>
+        <a class="acard c1" href="filosofia.html">
+            <span class="acard-per">Per chi vuole pensare</span>
+            <h3>Filosofia e scrittura</h3>
+            <p>La filosofia come pratica di ogni giorno: leggere gli antichi, dialogare, scrivere. Stoicismo quotidiano, dialogo filosofico, scrittura riflessiva, ricerca.</p>
+            <span class="acard-go">Vai alla sezione →</span>
+        </a>
+        <a class="acard c2" href="chi-educa.html">
+            <span class="acard-per">Per insegnanti, educatori, operatori</span>
+            <h3>Chi educa</h3>
+            <p>Formazione e materiali per chi lavora nella scuola, nell'educazione e nel sociale: corsi di progettazione, kit pronti per la classe.</p>
+            <span class="acard-go">Vai alla sezione →</span>
+        </a>
+        <a class="acard c3" href="famiglie.html">
+            <span class="acard-per">Per le famiglie e i ragazzi</span>
+            <h3>Famiglie e ragazzi</h3>
+            <p>Strumenti per accompagnare bambini e ragazzi: Kalmly per l'ADHD, kit per riconoscere le notizie false e per orientarsi nelle scelte.</p>
+            <span class="acard-go">Vai alla sezione →</span>
+        </a>
     </div>
 </section>
 
