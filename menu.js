@@ -13,12 +13,18 @@
      ───────────────────────────────────────────── */
   const NAV_HTML = `
     <div class="nav-inner">
-      <a href="/index.html" class="nav-logo" aria-label="Torna alla home">
-        <img src="/img/logo-nav.png" alt="Logo Formebrevi APS">
-      </a>
-      <button class="hamburger" id="hbtn" aria-label="Apri menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="testata" aria-hidden="true">
+        <span class="lettera">F</span><span class="linea"></span><span class="lettera">B</span>
+      </div>
+      <div class="sotto">
+        <a href="/index.html" class="nav-logo marchio" aria-label="Formebrevi APS, torna alla home">
+          <img src="/img/simbolo.png" alt=""><span>Formebrevi APS</span>
+        </a>
+        <span class="dx">Associazione di promozione sociale<br>Caltanissetta</span>
+        <button class="hamburger" id="hbtn" aria-label="Apri menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
       <div class="nav-links" id="nmenu" role="navigation" aria-label="Menu principale">
         <a href="/index.html"          data-page="index.html">Home</a>
         <a href="/filosofia.html"      data-page="filosofia.html">Filosofia e scrittura</a>

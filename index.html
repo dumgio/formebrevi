@@ -48,176 +48,139 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/common.css">
     <style>
-                                        
-                                                                                        
-                                                
-        /* HERO */
-        .hero{max-width:1080px;margin:0 auto;padding:64px 24px 56px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;animation:up .55s ease both;}
-        .hero-left{display:flex;flex-direction:column;gap:14px;}
-        .hero-badge-home{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:#AD5537;border-radius:100px;padding:6px 14px;width:fit-content;}
-        .hero h1{font-size:clamp(2.8rem,8vw,5.2rem);font-weight:800;line-height:0.92;letter-spacing:-0.03em;color:var(--ink);}
-        .hero-sub{font-size:1.1rem;color:var(--muted);line-height:1.55;max-width:380px;margin-top:10px;}
-        .hero-actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
-
-        .btn{display:inline-block;font-size:0.82rem;font-weight:600;text-decoration:none;padding:14px 28px;border-radius:100px;transition:0.2s;}
-        .btn-fill{background:var(--ink);color:var(--white);}
-        .btn-outline{border:1.5px solid var(--border);color:var(--ink);}
-
-        .tag-stack{display:flex;flex-direction:column;gap:10px;}
-        .htag{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:12px 18px;font-size:0.85rem;font-weight:500;box-shadow:0 4px 12px rgba(0,0,0,.05);}
-
-        .divider{max-width:1080px;margin:0 auto;padding:0 24px;}
-        .divider::after{content:'';display:block;height:1px;background:var(--border);}
-
-        /* SECTIONS */
-        .aree{max-width:1080px;margin:0 auto;padding:48px 24px;}
-        .label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:20px;display:block;}
-        .aree-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-        .acard{border-radius:20px;padding:32px;position:relative;overflow:hidden;transition:0.3s;}
-        .acard:hover{transform:translateY(-4px);}
-        .c1{background:#DCE4E4;}.c2{background:#F5E7C4;}.c3{background:#DEE7D3;}
-        .acard{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;}
-        .acard-per{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;}
-        .c1 .acard-per,.c1 .acard-go{color:#35494C;}.c2 .acard-per,.c2 .acard-go{color:#6E4C1C;}.c3 .acard-per,.c3 .acard-go{color:#374F31;}
-        .acard p{flex-grow:1;}
-        .acard-go{font-size:0.82rem;font-weight:700;margin-top:6px;}
-        a.htag{text-decoration:none;color:var(--ink);transition:transform .2s;}
-        a.htag:hover{transform:translateX(4px);}
-        .acard h3{font-size:1.3rem;font-weight:700;color:var(--ink);}
-        .acard p{font-size:0.92rem;color:var(--muted);line-height:1.6;}
-
-        /* JOIN CARD */
-        .join{max-width:1080px;margin:0 auto;padding:0 24px 24px;}
-        .join-card{background:#E9E1D2;border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
-        .join-text h2{font-size:1.7rem;font-weight:800;color:var(--ink);line-height:1.1;letter-spacing:-0.02em;margin-bottom:12px;}
-        .join-text p{font-size:1rem;color:rgba(0,0,0,.65);line-height:1.6;max-width:520px;}
-        .btn-dark{background:#833D26;color:#fff;}
-
-        /* IN EVIDENZA */
-        .evidenza{max-width:1080px;margin:0 auto;padding:24px 24px 56px;}
-        .evidenza-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-        .ev-card{border-radius:24px;padding:36px;display:flex;flex-direction:column;}
-        .ev-card.dialogo{background:#F3DBD8;}
-        .ev-card.ricerca{background:#DCE4E4;}
-        .ev-card.kalmly{background:#DEE7D3;grid-column:1 / -1;border:2px solid #4C6B45;flex-direction:row;align-items:center;gap:32px;}
-        .ev-tag{display:inline-block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;}
-        .ev-card.dialogo .ev-tag{color:#7A3730;}
-        .ev-card.ricerca .ev-tag{color:#35494C;}
-        .ev-card.kalmly .ev-tag{color:#374F31;}
-        .ev-card h2{font-size:1.4rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;}
-        .ev-card p{font-size:0.94rem;color:var(--muted);line-height:1.6;flex-grow:1;margin-bottom:22px;}
-        .ev-card.kalmly p{margin-bottom:0;}
-        .ev-card.kalmly .ev-main{flex:1;}
-        .ev-actions{display:flex;gap:10px;flex-wrap:wrap;}
-
-        .btn-terracotta{background:#AD5537;color:#fff;}
-        .btn-terracotta:hover{background:#833D26;}
-        .btn-rose{background:#7A3730;color:#fff;}
-        .btn-rose:hover{background:#5f2b26;}
-        .btn-slate{background:#35494C;color:#fff;}
-        .btn-slate:hover{background:#26363a;}
-        .btn-sage{background:#4C6B45;color:#fff;}
-        .btn-sage:hover{background:#374F31;}
-
-
-        @media(max-width:768px){
-
-            .hero,.aree-grid,.join-card,.evidenza-grid{grid-template-columns:1fr;}
-            .hero-right{display:none;}
-            .hero{padding:36px 20px;}
-            .join-card{padding:30px;}
+        /* Home in stile locandina: apertura con foto, blocchi divisi da righe, frecce lunghe. */
+        .pagina{max-width:1080px;margin:0 auto;padding:0 24px;}
+        .apertura{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;padding:72px 0 64px 22px;}
+        .testo h1{font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.05;}
+        .testo .sotto-titolo{font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.25;margin-top:6px;max-width:34ch;text-wrap:balance;}
+        .testo .serif{font-family:var(--serif);font-size:clamp(1.3rem,2.5vw,1.7rem);line-height:1.3;margin-top:28px;}
+        .testo .nota{font-size:1.05rem;margin-top:4px;}
+        .freccia{display:inline-flex;gap:10px;align-items:baseline;font-weight:700;text-decoration:none;margin-top:30px;font-size:1.05rem;}
+        .freccia span,.vai span,.azioni a span{font-family:var(--serif);font-weight:400;font-size:1.25em;display:inline-block;transition:transform .2s;}
+        .freccia:hover span,a.voce:hover .vai span{transform:translateX(6px);}
+        .foto{margin:0;}
+        .foto img{display:block;width:100%;height:auto;}
+        .blocco{border-top:2px solid var(--riga);padding:18px 0 56px;}
+        .etichetta{font-weight:700;font-size:.95rem;margin-bottom:28px;}
+        .tre{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;}
+        .due{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;}
+        .voce{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--riga);padding-top:14px;text-decoration:none;color:var(--nero);}
+        .voce .per{font-size:.9rem;font-weight:600;}
+        .voce h2{font-size:1.65rem;line-height:1.15;}
+        .voce p{color:var(--grigio);font-size:1rem;max-width:42ch;flex-grow:1;}
+        .voce .vai{font-weight:700;font-size:.95rem;margin-top:8px;}
+        .segno{width:52px;height:52px;fill:none;stroke:var(--nero);stroke-width:4.2;margin-bottom:10px;}
+        .voce.con-segno{flex-direction:row;align-items:flex-start;gap:20px;}
+        .voce.con-segno .segno{flex:none;margin:2px 0 0;}
+        .corpo{display:flex;flex-direction:column;gap:8px;min-width:0;flex:1;}
+        .azioni{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:8px;}
+        .azioni a{font-weight:700;font-size:.95rem;text-decoration:none;}
+        .azioni a:hover{text-decoration:underline;text-underline-offset:3px;}
+        .indirizzo{font-size:.9rem;color:var(--grigio);}
+        .parte{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end;border-top:2px solid var(--riga);border-bottom:2px solid var(--riga);padding:28px 0;}
+        .parte h2{font-family:var(--sans)!important;font-weight:700!important;font-size:1.6rem;line-height:1.1;margin-bottom:8px;}
+        .parte p{color:var(--grigio);max-width:56ch;}
+        .parte a{font-family:var(--serif);font-size:1.5rem;text-decoration:none;white-space:nowrap;}
+        .parte a:hover{text-decoration:underline;text-underline-offset:4px;}
+        .pagina + footer{margin-top:0!important;border-top:0!important;}
+        @media(max-width:760px){
+            .apertura{grid-template-columns:1fr;gap:32px;padding:44px 0 40px;}
+            .tre,.due{grid-template-columns:1fr;gap:28px;}
+            .parte{grid-template-columns:1fr;}
         }
     </style>
+    <link rel="stylesheet" href="/css/tema.css">
 </head>
 <body>
 
 <nav class="nav"></nav>
 
-<section class="hero">
-    <div class="hero-left">
-        <span class="hero-badge-home">Associazione di promozione sociale</span>
-        <h1>Formebrevi</h1>
-        <p class="hero-sub">La filosofia e il pensiero critico nell'educazione. Per chi vuole pensare, per chi educa, per le famiglie. Con strumenti brevi, gratuiti e aperti a tutti.</p>
-        <div class="hero-actions">
-            <a href="chi-siamo.html" class="btn btn-fill">La nostra visione</a>
-        </div>
-    </div>
-    <div class="hero-right">
-        <div class="tag-stack">
-            <a class="htag" href="filosofia.html"><span>🖋️</span> <strong>Filosofia e scrittura</strong></a>
-            <a class="htag" href="chi-educa.html"><span>🌱</span> <strong>Chi educa</strong></a>
-            <a class="htag" href="famiglie.html"><span>🧭</span> <strong>Famiglie e ragazzi</strong></a>
-        </div>
-    </div>
-</section>
+<div class="pagina">
 
-<div class="divider"></div>
-
-<section class="aree">
-    <span class="label">Le nostre sezioni</span>
-    <div class="aree-grid">
-        <a class="acard c1" href="filosofia.html">
-            <span class="acard-per">Per chi vuole pensare</span>
-            <h3>Filosofia e scrittura</h3>
-            <p>La filosofia come pratica di ogni giorno: leggere gli antichi, dialogare, scrivere. Stoicismo quotidiano, dialogo filosofico, scrittura riflessiva, ricerca.</p>
-            <span class="acard-go">Vai alla sezione →</span>
-        </a>
-        <a class="acard c2" href="chi-educa.html">
-            <span class="acard-per">Per insegnanti, educatori, operatori</span>
-            <h3>Chi educa</h3>
-            <p>Formazione e materiali per chi lavora nella scuola, nell'educazione e nel sociale: corsi di progettazione, kit pronti per la classe.</p>
-            <span class="acard-go">Vai alla sezione →</span>
-        </a>
-        <a class="acard c3" href="famiglie.html">
-            <span class="acard-per">Per le famiglie e i ragazzi</span>
-            <h3>Famiglie e ragazzi</h3>
-            <p>Strumenti per accompagnare bambini e ragazzi: Kalmly per l'ADHD, kit per riconoscere le notizie false e per orientarsi nelle scelte.</p>
-            <span class="acard-go">Vai alla sezione →</span>
-        </a>
+  <section class="apertura">
+    <div class="testo">
+      <h1>Formebrevi</h1>
+      <p class="sotto-titolo">Promuoviamo la cultura del dialogo, la lettura e la filosofia come pratiche di sviluppo della persona e della comunità.</p>
+      <p class="serif">A ogni età, in ogni luogo dove si educa.</p>
+      <p class="nota">Incontri, corsi di formazione, pubblicazioni e progetti educativi.</p>
+      <a class="freccia" href="chi-siamo.html">La nostra visione <span>⟶</span></a>
     </div>
-</section>
+    <figure class="foto"><img src="/img/home-incontro.jpg" width="772" height="513" alt="Un incontro di Formebrevi: il pubblico seduto ascolta il relatore in una sala con statue"></figure>
+  </section>
 
-<section class="evidenza">
-    <span class="label">In evidenza</span>
-    <div class="evidenza-grid">
-        <div class="ev-card dialogo">
-            <span class="ev-tag">Dialogo Filosofico</span>
-            <h2>Uno spazio di dialogo aperto a tutti</h2>
-            <p>Formebrevi promuove il dialogo filosofico come pratica di crescita e di cura reciproca. Le sessioni si svolgono online e sono gratuite per chi è associato — la quota annuale è di 10€ — e si possono prenotare in qualsiasi momento.</p>
-            <div class="ev-actions">
-                <a href="mailto:formebrevi@gmail.com?subject=Prenotazione%20sessione%20di%20Dialogo%20Filosofico" class="btn btn-rose">Prenota una sessione</a>
-                <a href="iscriviti.html" class="btn btn-outline">Iscriviti a Formebrevi</a>
-            </div>
-        </div>
-        <div class="ev-card ricerca">
-            <span class="ev-tag">Invito a contribuire</span>
-            <h2>Contribuisci alla ricerca</h2>
-            <p>Accogliamo articoli e saggi in ambito pedagogico e filosofico, per alimentare la riflessione e il confronto nel settore educativo.</p>
-            <div class="ev-actions">
-                <a href="call-for-papers.html" class="btn btn-slate">Invia contributo →</a>
-            </div>
-        </div>
+  <section class="blocco">
+    <p class="etichetta">Le nostre sezioni</p>
+    <div class="tre">
+      <a class="voce" href="filosofia.html">
+        <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path d="M16 8 Q30 64 64 94"/><path d="M84 8 Q70 64 36 94"/><path d="M50 4 Q47 50 50 96"/></svg>
+        <span class="per">Per chi vuole pensare</span>
+        <h2>Filosofia e scrittura</h2>
+        <p>La filosofia come pratica di ogni giorno: leggere gli antichi, dialogare, scrivere. Stoicismo quotidiano, dialogo filosofico, scrittura riflessiva, ricerca.</p>
+        <span class="vai">Vai alla sezione <span>⟶</span></span>
+      </a>
+      <a class="voce" href="chi-educa.html">
+        <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 97 Q47 70 50 44"/><path d="M50 62 Q22 62 14 28 Q44 32 50 62"/><path d="M50 50 Q74 46 84 14 Q56 20 50 50"/></svg>
+        <span class="per">Per insegnanti, educatori, operatori</span>
+        <h2>Chi educa</h2>
+        <p>Formazione e materiali per chi lavora nella scuola, nell'educazione e nel sociale: corsi di progettazione, kit pronti per la classe.</p>
+        <span class="vai">Vai alla sezione <span>⟶</span></span>
+      </a>
+      <a class="voce" href="famiglie.html">
+        <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path d="M8 94 C8 16 68 16 68 94"/><path d="M38 94 C38 44 92 44 92 94"/></svg>
+        <span class="per">Per le famiglie e i ragazzi</span>
+        <h2>Famiglie e ragazzi</h2>
+        <p>Strumenti per accompagnare bambini e ragazzi: Kalmly per l'ADHD, kit per riconoscere le notizie false e per orientarsi nelle scelte.</p>
+        <span class="vai">Vai alla sezione <span>⟶</span></span>
+      </a>
     </div>
-</section>
+  </section>
 
-<section class="join" style="padding-bottom:48px">
-    <div class="join-card">
-        <div class="join-text">
-            <h2>Fai parte del progetto.</h2>
-            <p>Formebrevi è un'associazione di volontari. Entra a far parte della nostra comunità educativa e contribuisci a costruire cultura libera.</p>
+  <section class="blocco">
+    <p class="etichetta">In evidenza</p>
+    <div class="due">
+      <div class="voce con-segno">
+        <svg class="segno" viewBox="0 0 100 100" aria-hidden="true" style="stroke-linecap:round"><path d="M62 10 C30 4 4 28 10 58 C16 88 56 96 78 78 C96 62 90 28 64 18 C40 10 16 30 22 54 C28 80 64 84 80 64 C92 48 78 26 56 28 C38 30 30 52 44 62"/></svg>
+        <div class="corpo">
+        <span class="per">Dialogo Filosofico</span>
+        <h2>Uno spazio di dialogo aperto a tutti</h2>
+        <p>Formebrevi promuove il dialogo filosofico come pratica di crescita e di cura reciproca. Le sessioni si svolgono online e sono gratuite per chi è associato — la quota annuale è di 10€ — e si possono prenotare in qualsiasi momento.</p>
+        <div class="azioni">
+          <a href="mailto:formebrevi@gmail.com?subject=Prenotazione%20sessione%20di%20Dialogo%20Filosofico">Prenota una sessione <span>⟶</span></a>
+          <a href="iscriviti.html">Iscriviti a Formebrevi <span>⟶</span></a>
         </div>
-        <a href="iscriviti.html" class="btn btn-dark">Associati ora</a>
+        <span class="indirizzo">formebrevi@gmail.com</span>
+        </div>
+      </div>
+      <a class="voce con-segno" href="call-for-papers.html">
+        <svg class="segno" viewBox="0 0 100 100" aria-hidden="true" style="stroke-linejoin:round"><path d="M50 30 C38 20 20 20 6 26 L6 80 C20 74 38 74 50 84 C62 74 80 74 94 80 L94 26 C80 20 62 20 50 30 Z"/><path d="M50 30 L50 84"/><path d="M50 30 C42 16 28 12 16 14"/><path d="M50 30 C58 16 72 12 84 14"/></svg>
+        <div class="corpo">
+        <span class="per">Invito a contribuire</span>
+        <h2>Contribuisci alla ricerca</h2>
+        <p>Accogliamo articoli e saggi in ambito pedagogico e filosofico, per alimentare la riflessione e il confronto nel settore educativo.</p>
+        <span class="vai">Invia contributo <span>⟶</span></span>
+        </div>
+      </a>
     </div>
-</section>
+  </section>
+
+  <section class="parte">
+    <div>
+      <h2>Fai parte del progetto.</h2>
+      <p>Formebrevi è un'associazione di volontari. Entra a far parte della nostra comunità educativa e contribuisci a costruire cultura libera.</p>
+    </div>
+    <a href="iscriviti.html">Associati ora ⟶</a>
+  </section>
+
+</div>
 
 <footer>
     <p><strong>Formebrevi APS</strong><br>
     Via Michelangelo s.n., 93100 Caltanissetta<br>
     C.F. 92064060855 · RUNTS n. 72338 del 07/11/2022</p>
-    <p style="margin-top:12px;"><a href="privacy.html" style="color:#6E5D4E;text-decoration:none;font-size:0.75rem;">Privacy e Cookie Policy</a></p>
+    <p style="margin-top:12px;"><a href="privacy.html" style="color:#3B3333;text-decoration:none;font-size:0.75rem;">Privacy e Cookie Policy</a></p>
 </footer>
 
 <script src="/menu.js"></script>

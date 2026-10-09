@@ -22,12 +22,12 @@
     <title>Famiglie e ragazzi | Formebrevi APS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/common.css">
     <style>
                                                                                                                                                                 .page-hero{max-width:1080px;margin:0 auto;padding:36px 24px 32px;animation:up .55s ease both;}
-        .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:100px;padding:6px 14px;margin-bottom:20px;color:#374F31;background:#DEE7D3;}
-        .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#374F31;flex-shrink:0;}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:100px;padding:6px 14px;margin-bottom:20px;color:#111111;background:#DEE7D3;}
+        .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#111111;flex-shrink:0;}
         .page-hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;color:var(--ink);margin-bottom:16px;}
         .page-hero .sub{font-size:1.05rem;color:var(--muted);line-height:1.65;max-width:560px;}
         .divider{max-width:1080px;margin:0 auto;padding:0 24px;}
@@ -37,36 +37,36 @@
         .resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
         .res-card{border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s;}
         .res-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.08);}
-        .res-card.green {background:#F1DCC4;border:1px solid #AD5537;}
-        .res-card.blue  {background:#DCE4E4;border:1px solid #35494C;}
-        .res-card.orange{background:#F5E7C4;border:1px solid #93672A;}
-        .res-card.teal  {background:#E3E8D2;border:1px solid #4A5D2A;}
-        .res-card.violet{background:#F3DBD8;border:1px solid #7A3730;}
-        .res-card.mint  {background:#DEE7D3;border:1px solid #4C6B45;}
-        .res-card.amber {background:#F0E4C2;border:1px solid #8A6D1F;}
+        .res-card.green {background:#F1DCC4;border:1px solid #111111;}
+        .res-card.blue  {background:#DCE4E4;border:1px solid #111111;}
+        .res-card.orange{background:#F5E7C4;border:1px solid #111111;}
+        .res-card.teal  {background:#E3E8D2;border:1px solid #111111;}
+        .res-card.violet{background:#F3DBD8;border:1px solid #111111;}
+        .res-card.mint  {background:#DEE7D3;border:1px solid #111111;}
+        .res-card.amber {background:#F0E4C2;border:1px solid #111111;}
         .res-tag {font-size:0.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);}
         .res-icon{font-size:1.7rem;line-height:1;}
         .res-title{font-size:1rem;font-weight:700;color:var(--ink);line-height:1.25;}
         .res-desc {font-size:0.86rem;color:var(--muted);line-height:1.65;flex-grow:1;}
         .res-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px;}
         .res-badge{display:inline-flex;align-items:center;font-size:0.67rem;font-weight:600;padding:3px 9px;border-radius:100px;}
-        .badge-pdf {background:#fff;color:#93672A;border:1px solid #E8D5A8;}
-        .badge-free{background:#F1DCC4;color:#AD5537;border:1px solid #AD5537;}
-        .badge-cc  {background:#E9E1D2;color:#2A2018;border:1px solid var(--border);}
-        .badge-type{background:#E9E1D2;color:#2A2018;border:1px solid var(--border);}
-        .btn-dl{display:inline-flex;align-items:center;gap:7px;background:#AD5537;color:#fff;font-size:0.8rem;font-weight:600;padding:10px 20px;border-radius:100px;text-decoration:none;transition:background .18s;align-self:flex-start;margin-top:4px;}
-        .btn-dl:hover{background:#833D26;}
+        .badge-pdf {background:#fff;color:#111111;border:1px solid #E8D5A8;}
+        .badge-free{background:#F1DCC4;color:#111111;border:1px solid #111111;}
+        .badge-cc  {background:#E9E1D2;color:#111111;border:1px solid var(--border);}
+        .badge-type{background:#E9E1D2;color:#111111;border:1px solid var(--border);}
+        .btn-dl{display:inline-flex;align-items:center;gap:7px;background:#111111;color:#fff;font-size:0.8rem;font-weight:600;padding:10px 20px;border-radius:100px;text-decoration:none;transition:background .18s;align-self:flex-start;margin-top:4px;}
+        .btn-dl:hover{background:#111111;}
         .btn-dl svg{width:13px;height:13px;flex-shrink:0;}
-        .btn-dl.orange{background:#93672A;}.btn-dl.orange:hover{background:#6E4C1C;}
-        .btn-dl.blue  {background:#35494C;}.btn-dl.blue:hover  {background:#26363a;}
-        .btn-dl.teal  {background:#4A5D2A;}.btn-dl.teal:hover  {background:#38461F;}
-        .btn-dl.violet{background:#7A3730;}.btn-dl.violet:hover{background:#5f2b26;}
-        .btn-dl.mint  {background:#4C6B45;}.btn-dl.mint:hover  {background:#374F31;}
-        .btn-dl.amber {background:#8A6D1F;}.btn-dl.amber:hover {background:#5F4A15;}
+        .btn-dl.orange{background:#111111;}.btn-dl.orange:hover{background:#111111;}
+        .btn-dl.blue  {background:#111111;}.btn-dl.blue:hover  {background:#111111;}
+        .btn-dl.teal  {background:#111111;}.btn-dl.teal:hover  {background:#111111;}
+        .btn-dl.violet{background:#111111;}.btn-dl.violet:hover{background:#111111;}
+        .btn-dl.mint  {background:#111111;}.btn-dl.mint:hover  {background:#111111;}
+        .btn-dl.amber {background:#111111;}.btn-dl.amber:hover {background:#111111;}
         .info-strip{max-width:1080px;margin:0 auto;padding:40px 24px 52px;}
         .info-inner{background:#DEE7D3;border-radius:16px;padding:22px 30px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
         .info-inner p{font-size:0.88rem;color:var(--muted);line-height:1.65;flex:1;min-width:200px;}
-        .info-inner a{color:#374F31;font-weight:600;text-decoration:none;}
+        .info-inner a{color:#111111;font-weight:600;text-decoration:none;}
         .info-inner a:hover{text-decoration:underline;}
                         .resources-grid.solo{grid-template-columns:1fr;}
         .resources-grid.solo .res-desc{max-width:680px;}
@@ -76,6 +76,7 @@
             .resources-grid,.resources-grid.duo{grid-template-columns:1fr;}
                                                         }
     </style>
+    <link rel="stylesheet" href="/css/tema.css">
 </head>
 <body>
 
@@ -161,7 +162,7 @@
     <p><strong>Formebrevi APS</strong><br>
     Via Michelangelo s.n., 93100 Caltanissetta<br>
     C.F. 92064060855 · RUNTS n. 72338 del 07/11/2022</p>
-    <p style="margin-top:12px;"><a href="privacy.html" style="color:#6E5D4E;text-decoration:none;font-size:0.75rem;">Privacy e Cookie Policy</a></p>
+    <p style="margin-top:12px;"><a href="privacy.html" style="color:#3B3333;text-decoration:none;font-size:0.75rem;">Privacy e Cookie Policy</a></p>
 </footer>
 
 <script src="/menu.js"></script>
