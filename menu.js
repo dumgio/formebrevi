@@ -28,7 +28,7 @@
           <button type="button" class="aree-btn" id="areebtn" aria-expanded="false" aria-controls="areemenu">Aree di intervento <span aria-hidden="true">▾</span></button>
           <div class="aree-menu" id="areemenu">
             <a href="/filosofia.html"  data-page="filosofia.html">Filosofia e scrittura</a>
-            <a href="/chi-educa.html"  data-page="chi-educa.html">Chi educa</a>
+            <a href="/chi-educa.html"  data-page="chi-educa.html">Educazione e sociale</a>
             <a href="/famiglie.html"   data-page="famiglie.html">Famiglie e scuola</a>
           </div>
         </div>
