@@ -26,143 +26,143 @@
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/common.css">
     <style>
-                                                                                                                                                                
-        .page-hero{max-width:1080px;margin:0 auto;padding:36px 24px 32px;animation:up .55s ease both;}
-        .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:100px;padding:6px 14px;margin-bottom:20px;}
-        .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0;}
-        .badge-violet{color:#111111;background:#F1DCC4;}.badge-violet::before{background:#111111;}
-        .page-hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;color:var(--ink);margin-bottom:16px;}
-        .page-hero .sub{font-size:1.05rem;color:var(--muted);line-height:1.65;max-width:560px;}
-        
-        .divider{max-width:1080px;margin:0 auto;padding:0 24px;}
-        .divider::after{content:'';display:block;height:1px;background:var(--border);}
-        .section-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:20px;display:block;padding-bottom:12px;border-bottom:1px solid var(--border);}
-        
-        .content-wrap{max-width:1080px;margin:0 auto;padding:36px 24px 0;}
-        .blocks-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;}
-        .block-item{padding:36px 0;border-bottom:1px solid var(--border);}
-        .block-item:nth-child(odd){padding-right:40px;border-right:1px solid var(--border);}
-        .block-item:nth-child(even){padding-left:40px;}
-        .block-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);display:block;margin-bottom:10px;}
-        .block-item h2{font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.25;}
-        .block-item p{font-size:0.95rem;color:var(--muted);line-height:1.7;}
-
-        .section-wrap{max-width:1080px;margin:0 auto;padding:28px 24px 0;}
-        .membership-card{background:#DEE7D3;border-radius:20px;padding:32px;border:2px solid #111111;}
-        .membership-card h2{font-size:1.8rem;font-weight:800;letter-spacing:-0.02em;color:var(--ink);margin-bottom:24px;}
-        .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:36px;}
-        .step{background:rgba(255,255,255,0.7);border-radius:12px;padding:20px;}
-        .step-num{font-size:1.4rem;font-weight:800;color:#111111;margin-bottom:8px;}
-        .step p{font-size:0.85rem;color:var(--muted);line-height:1.5;margin:0;}
-        .step a{color:#111111;text-decoration:none;}
-        .step a:hover{opacity:.75;}
-        .membership-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid rgba(0,0,0,0.1);flex-wrap:wrap;gap:16px;}
-        .btn{display:inline-block;font-size:0.82rem;font-weight:600;text-decoration:none;padding:13px 26px;border-radius:100px;transition:0.2s;}
-        .btn-dark{background:#111111;color:#fff;}
-
-        .teasers-section{max-width:1080px;margin:0 auto;padding:28px 24px 0;}
-        .teasers-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
-        .teaser-card{border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:12px;position:relative;}
-        .teaser-card.coral{background:#F5E7C4;}
-        .teaser-card.sky{background:#DCE4E4;}
-        .teaser-card.sage{background:#DEE7D3;grid-column:1/-1;}
-        .teaser-card.sage .teaser-link{color:#111111;}
-        .teaser-card .teaser-tag{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);}
-        .teaser-card h3{font-size:1.2rem;font-weight:700;color:var(--ink);}
-        .teaser-card p{font-size:0.92rem;color:var(--muted);line-height:1.65;flex-grow:1;}
-        .teaser-link{font-size:0.82rem;font-weight:700;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
-        .teaser-card.coral .teaser-link{color:#111111;}
-        .teaser-link:hover{opacity:.75;}
-        
-        /* Note di sospensione nel teaser */
-        .status-note{font-size:0.7rem;font-weight:700;color:#111111;text-transform:uppercase;margin-top:8px;display:block;}
-
-        .page-bottom{height:48px;}
-                
-        @media(max-width:680px){
-            .blocks-grid,.steps-grid,.teasers-grid{grid-template-columns:1fr;}
-            .block-item:nth-child(odd){padding-right:0;border-right:none;}
-            .block-item:nth-child(even){padding-left:0;}
-                                                        }
+        /* Chi siamo in stile locandina: apertura con scheda delle date, tre parti divise da righe, simboli a linea. */
+        .pagina{max-width:1080px;margin:0 auto;padding:0 24px;}
+        .apertura{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:56px;align-items:end;padding:64px 0 56px 22px;}
+        .apertura .per{font-weight:600;font-size:.95rem;}
+        .apertura h1{font-size:clamp(2.4rem,5.5vw,3.6rem);line-height:1.02;margin:10px 0 18px;}
+        .apertura .sotto-titolo{font-size:clamp(1.2rem,2.2vw,1.45rem);line-height:1.3;max-width:34ch;}
+        .date{list-style:none;border-top:2px solid var(--riga);}
+        .date li{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--riga);font-size:.98rem;}
+        .date li span:last-child{font-family:var(--serif);font-size:1.15rem;white-space:nowrap;}
+        .date li span:last-child::before{content:"⟶  ";white-space:pre;}
+        .parte-pagina{border-top:2px solid var(--riga);padding:18px 0 64px;}
+        .titolo-parte{font-family:var(--serif);font-size:1.6rem;line-height:1.2;margin-bottom:32px;}
+        .due,.quattro{display:grid;gap:36px;}
+        .due{grid-template-columns:repeat(2,minmax(0,1fr));}
+        .quattro{grid-template-columns:repeat(4,minmax(0,1fr));}
+        .voce{display:flex;gap:20px;align-items:flex-start;border-top:1px solid var(--riga);padding-top:16px;text-decoration:none;color:var(--nero);}
+        .voce .corpo{display:flex;flex-direction:column;gap:8px;min-width:0;}
+        .voce .per{font-size:.9rem;font-weight:600;}
+        .voce h2,.voce h3{font-size:1.55rem;line-height:1.15;}
+        .voce p{color:var(--grigio);font-size:1rem;max-width:46ch;}
+        .voce .vai{font-weight:700;font-size:.95rem;margin-top:6px;}
+        .vai span,.azione span{font-family:var(--serif);font-weight:400;font-size:1.25em;display:inline-block;transition:transform .2s;}
+        a.voce:hover .vai span,.azione:hover span{transform:translateX(6px);}
+        .segno{flex:none;width:48px;height:48px;fill:none;stroke:var(--nero);stroke-width:4.2;}
+        .associazione h2{font-family:var(--sans)!important;font-weight:700!important;font-size:1.6rem;margin-bottom:28px;}
+        .passo{border-top:1px solid var(--riga);padding-top:14px;}
+        .passo .num{display:block;font-family:var(--serif);font-size:2.6rem;line-height:1;margin-bottom:12px;}
+        .passo p{color:var(--grigio);font-size:1rem;}
+        .passo a{text-decoration:underline;text-underline-offset:3px;}
+        .azione{display:inline-flex;gap:10px;align-items:baseline;margin-top:36px;font-family:var(--serif);font-size:1.5rem;text-decoration:none;color:var(--nero);}
+        .pagina + footer{margin-top:0!important;}
+        @media(max-width:860px){.quattro{grid-template-columns:repeat(2,minmax(0,1fr));}}
+        @media(max-width:760px){
+            .apertura{grid-template-columns:1fr;gap:36px;padding:40px 0 40px;}
+            .due{grid-template-columns:1fr;gap:28px;}
+        }
+        @media(max-width:480px){.quattro{grid-template-columns:1fr;gap:24px;}}
     </style>
     <link rel="stylesheet" href="/css/tema.css">
 </head>
-<body class="senza-numeri">
+<body>
 
 <nav class="nav"></nav>
 
-<header class="page-hero">
-    <span class="hero-badge badge-violet">Chi Siamo</span>
-    <h1>Identità e Visione</h1>
-    <p class="sub">Formebrevi promuove la riflessione, il pensiero critico e la produzione culturale come strumenti di formazione e di partecipazione civica.</p>
+<div class="pagina">
+
+<header class="apertura">
+    <div>
+        <span class="per">Chi Siamo</span>
+        <h1>Identità e Visione</h1>
+        <p class="sotto-titolo">Formebrevi promuove la riflessione, il pensiero critico e la produzione culturale come strumenti di formazione e di partecipazione civica.</p>
+    </div>
+    <ul class="date" aria-label="Formebrevi in breve">
+        <li><span>Nasce a Caltanissetta</span><span>settembre 2015</span></li>
+        <li><span>Premio Letterario Formebrevi</span><span>2017 – 2020</span></li>
+        <li><span>Formebrevi Edizioni</span><span>17 titoli</span></li>
+        <li><span>Iscrizione al RUNTS</span><span>7 novembre 2022</span></li>
+    </ul>
 </header>
 
-<div class="divider"></div>
-
-<div class="content-wrap">
-    <div class="blocks-grid">
-        <div class="block-item">
-            <span class="block-label">01 — Territorio e Metodo</span>
-            <h2>Dove le persone vivono</h2>
-            <p>Formebrevi è un'associazione di promozione sociale con sede a Caltanissetta. Lavora nei contesti di vita quotidiana della comunità e porta ciò che impara sul campo dentro la riflessione filosofica e pedagogica.</p>
+<section class="parte-pagina">
+    <h2 class="titolo-parte">Territorio e formazione</h2>
+    <div class="due">
+        <div class="voce">
+            <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path d="M2 74 Q28 34 56 70"/><path d="M38 60 Q66 30 98 70"/><path d="M4 90 Q50 76 96 90"/></svg>
+            <div class="corpo">
+                <span class="per">01 — Territorio e Metodo</span>
+                <h3>Dove le persone vivono</h3>
+                <p>Formebrevi è un'associazione di promozione sociale con sede a Caltanissetta. Lavora nei contesti di vita quotidiana della comunità e porta ciò che impara sul campo dentro la riflessione filosofica e pedagogica.</p>
+            </div>
         </div>
-        <div class="block-item">
-            <span class="block-label">02 — Conoscenza e Formazione</span>
-            <h2>Formazione e pratica filosofica</h2>
-            <p>Organizziamo corsi, laboratori e seminari di pedagogia e filosofia, per chi educa e per chi vuole riflettere. I laboratori di filosofia con bambini, adolescenti e adulti sono spazi di dialogo, ascolto e pensiero critico.</p>
+        <div class="voce">
+            <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path style="stroke-linecap:round" d="M62 10 C30 4 4 28 10 58 C16 88 56 96 78 78 C96 62 90 28 64 18 C40 10 16 30 22 54 C28 80 64 84 80 64 C92 48 78 26 56 28 C38 30 30 52 44 62"/></svg>
+            <div class="corpo">
+                <span class="per">02 — Conoscenza e Formazione</span>
+                <h3>Formazione e pratica filosofica</h3>
+                <p>Organizziamo corsi, laboratori e seminari di pedagogia e filosofia, per chi educa e per chi vuole riflettere. I laboratori di filosofia con bambini, adolescenti e adulti sono spazi di dialogo, ascolto e pensiero critico.</p>
+            </div>
         </div>
     </div>
+</section>
+
+<section id="associati" class="parte-pagina associazione">
+    <p class="titolo-parte">Associazione</p>
+    <h2>Fai parte del progetto.</h2>
+    <div class="quattro">
+        <div class="passo"><span class="num">01</span><p>Leggi lo <a href="/media/statuto.pdf" target="_blank" rel="noopener"><strong>Statuto</strong></a> e scopri i valori della nostra missione.</p></div>
+        <div class="passo"><span class="num">02</span><p>Compila il <a href="iscriviti.html"><strong>Modulo online</strong></a> con i tuoi dati richiesti.</p></div>
+        <div class="passo"><span class="num">03</span><p>La domanda sarà esaminata dal <strong>Consiglio Direttivo</strong>.</p></div>
+        <div class="passo"><span class="num">04</span><p>Versa la <strong>quota associativa</strong> annuale di 10 €.</p></div>
+    </div>
+    <a href="iscriviti.html" class="azione">Associati ora <span>⟶</span></a>
+</section>
+
+<section class="parte-pagina">
+    <h2 class="titolo-parte">Eredità Culturale</h2>
+    <div class="due">
+        <a class="voce" href="storia.html">
+            <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path d="M30 6 Q44 50 30 94"/><path d="M30 24 Q54 22 70 10"/><path d="M33 48 Q60 48 86 32"/><path d="M32 72 Q56 74 78 62"/></svg>
+            <div class="corpo">
+                <span class="per">Dal 2015</span>
+                <h3>La nostra storia</h3>
+                <p>Il piccolo manifesto e le tappe di Formebrevi: dalla cultura del libro e del dialogo alla filosofia e al Terzo Settore.</p>
+                <span class="vai">Percorri la storia <span>⟶</span></span>
+            </div>
+        </a>
+        <a class="voce" href="edizioni.html">
+            <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path style="stroke-linejoin:round" d="M50 30 C38 20 20 20 6 26 L6 80 C20 74 38 74 50 84 C62 74 80 74 94 80 L94 26 C80 20 62 20 50 30 Z"/><path d="M50 30 L50 84"/><path d="M50 30 C42 16 28 12 16 14"/><path d="M50 30 C58 16 72 12 84 14"/></svg>
+            <div class="corpo">
+                <span class="per">Storia editoriale</span>
+                <h3>Formebrevi Edizioni</h3>
+                <p>Anni di ricerca letteraria indipendente. Un progetto dedicato alle scritture di ricerca.</p>
+                <span class="vai">Archivio pubblicazioni <span>⟶</span></span>
+            </div>
+        </a>
+        <a class="voce" href="premio.html">
+            <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path d="M44 92 C10 74 4 36 26 8"/><path d="M56 92 C90 74 96 36 74 8"/><path d="M18 64 Q8 52 10 40"/><path d="M82 64 Q92 52 90 40"/><path d="M14 40 Q4 30 10 18"/><path d="M86 40 Q96 30 90 18"/></svg>
+            <div class="corpo">
+                <span class="per">Archivio</span>
+                <h3>Premio Letterario</h3>
+                <p>Tre edizioni, dal 2017 al 2020, dedicate alle opere inedite di poesia e prosa. Un premio indipendente, realizzato senza contributi pubblici.</p>
+                <span class="vai">Scopri il Premio <span>⟶</span></span>
+            </div>
+        </a>
+        <a class="voce" href="notizie.html">
+            <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path d="M8 22 Q50 14 92 22"/><path d="M8 46 Q50 38 92 46"/><path d="M8 70 Q50 62 92 70"/><path d="M8 92 Q30 86 52 90"/></svg>
+            <div class="corpo">
+                <span class="per">Archivio</span>
+                <h3>Notizie</h3>
+                <p>Le notizie di Formebrevi APS.</p>
+                <span class="vai">Leggi le notizie <span>⟶</span></span>
+            </div>
+        </a>
+    </div>
+</section>
+
 </div>
-
-<section id="associati" class="section-wrap">
-    <div class="membership-card">
-        <span class="section-label">Associazione</span>
-        <h2>Fai parte del progetto.</h2>
-        <div class="steps-grid">
-            <div class="step"><div class="step-num">01</div><p>Leggi lo <a href="/media/statuto.pdf" target="_blank" rel="noopener"><strong>Statuto</strong></a> e scopri i valori della nostra missione.</p></div>
-            <div class="step"><div class="step-num">02</div><p>Compila il <a href="iscriviti.html"><strong>Modulo online</strong></a> con i tuoi dati richiesti.</p></div>
-            <div class="step"><div class="step-num">03</div><p>La domanda sarà esaminata dal <strong>Consiglio Direttivo</strong>.</p></div>
-            <div class="step"><div class="step-num">04</div><p>Versa la <strong>quota associativa</strong> annuale di 10 €.</p></div>
-        </div>
-        <div class="membership-bottom">
-            <a href="iscriviti.html" class="btn btn-dark">Associati ora</a>
-        </div>
-    </div>
-</section>
-
-<div class="divider" style="margin-top:48px;"></div>
-
-<section class="teasers-section">
-    <span class="section-label">Eredità Culturale</span>
-    <div class="teasers-grid">
-        <div class="teaser-card sage">
-            <span class="teaser-tag">Dal 2015</span>
-            <h3>La nostra storia</h3>
-            <p>Il piccolo manifesto e le tappe di Formebrevi: dalla cultura del libro e del dialogo alla filosofia e al Terzo Settore.</p>
-            <a href="storia.html" class="teaser-link">Percorri la storia ⟶</a>
-        </div>
-        <div class="teaser-card coral">
-            <span class="teaser-tag">Storia editoriale</span>
-            <h3>Formebrevi Edizioni</h3>
-            <p>Anni di ricerca letteraria indipendente. Un progetto dedicato alle scritture di ricerca.</p>
-            <a href="edizioni.html" class="teaser-link" style="margin-top:10px;">Archivio pubblicazioni ⟶</a>
-        </div>
-        <div class="teaser-card sky">
-            <span class="teaser-tag">Archivio</span>
-            <h3>Premio Letterario</h3>
-            <p>Tre edizioni, dal 2017 al 2020, dedicate alle opere inedite di poesia e prosa. Un premio indipendente, realizzato senza contributi pubblici.</p>
-            <a href="premio.html" class="teaser-link">Scopri il Premio ⟶</a>
-        </div>
-        <div class="teaser-card sage">
-            <span class="teaser-tag">Archivio</span>
-            <h3>Notizie</h3>
-            <p>Le notizie di Formebrevi APS.</p>
-            <a href="notizie.html" class="teaser-link">Leggi le notizie ⟶</a>
-        </div>
-    </div>
-</section>
-
-<div class="page-bottom"></div>
 
 <footer>
     <p><strong>Formebrevi APS</strong><br>
