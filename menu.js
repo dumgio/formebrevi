@@ -17,10 +17,6 @@
         <a href="/index.html" class="nav-logo marchio" aria-label="Formebrevi APS, torna alla home">
           <img src="/img/simbolo.png" alt=""><span>Formebrevi APS</span>
         </a>
-        <div class="colori" role="group" aria-label="Colore del sito">
-          <button type="button" data-fondo="" style="--c:#C3D8E3" aria-label="Azzurro" title="Azzurro"></button>
-          <button type="button" data-fondo="avorio" style="--c:#EFE9DC" aria-label="Avorio" title="Avorio"></button>
-        </div>
         <span class="dx">Associazione di promozione sociale<br>Caltanissetta</span>
         <button class="hamburger" id="hbtn" aria-label="Apri menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -88,25 +84,6 @@
         document.getElementById('areebtn').classList.add('cur');
       }
     }
-
-    /* Colore del sito: il visitatore sceglie fra azzurro e avorio, il browser lo ricorda. */
-    var bottoniColore = navEl.querySelectorAll('.colori button');
-    function segnaColore() {
-      var attuale = document.documentElement.getAttribute('data-fondo') || '';
-      bottoniColore.forEach(function (b) {
-        b.setAttribute('aria-pressed', String(b.getAttribute('data-fondo') === attuale));
-      });
-    }
-    bottoniColore.forEach(function (b) {
-      b.addEventListener('click', function () {
-        var f = b.getAttribute('data-fondo');
-        if (f) document.documentElement.setAttribute('data-fondo', f);
-        else document.documentElement.removeAttribute('data-fondo');
-        try { if (f) localStorage.setItem('fb-fondo', f); else localStorage.removeItem('fb-fondo'); } catch (e) {}
-        segnaColore();
-      });
-    });
-    segnaColore();
 
     /* Sottomenu «Aree di intervento»: si apre al passaggio del mouse
        (vedi tema.css) e al clic, per chi usa tastiera o schermo touch. */
