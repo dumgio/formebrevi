@@ -49,11 +49,36 @@ p{color:inherit;}
     .nav-links a:last-child{border-bottom:0!important;}
 }
 
+/* Sottomenu «Aree di intervento» */
+.voce-aree{position:relative;}
+.aree-btn{font:inherit;font-size:.95rem;color:var(--nero);background:none;border:0;padding:0;cursor:pointer;}
+.aree-btn span{font-size:.75em;margin-left:2px;}
+.aree-btn.cur{font-weight:700;}
+.aree-btn:hover{text-decoration:underline;text-underline-offset:3px;}
+.aree-menu{display:none;position:absolute;top:100%;left:-14px;z-index:60;min-width:230px;flex-direction:column;background:var(--fondo);border-top:2px solid var(--riga);border-bottom:1px solid var(--riga);padding:4px 0;margin-top:8px;}
+.aree-menu::before{content:"";position:absolute;left:0;right:0;top:-12px;height:10px;}
+.voce-aree:hover .aree-menu,.voce-aree:focus-within .aree-menu,.aree-menu.aperto{display:flex;}
+.aree-menu a{padding:9px 14px!important;border-bottom:1px solid var(--riga)!important;}
+.aree-menu a:last-child{border-bottom:0!important;}
+@media(max-width:960px){
+    .aree-btn{display:block;width:100%;text-align:left;padding:12px 0;border-bottom:1px solid var(--riga);cursor:default;pointer-events:none;}
+    .aree-btn span{display:none;}
+    .aree-menu{display:flex!important;position:static;border:0;margin:0;padding:0 0 0 18px;min-width:0;}
+    .aree-menu::before{display:none;}
+    .aree-menu a{padding:10px 0!important;}
+    .voce-aree{border-bottom:1px solid var(--riga);}
+}
+
 /* ─── RIGHE ─── */
 .divider::after{background:var(--riga)!important;height:2px!important;}
 hr{border:0;border-top:2px solid var(--riga);}
-.divider:has(+ .resources-wrap),.divider:has(+ section){display:none!important;}
-.section-label,.label{border:0!important;border-top:2px solid var(--riga)!important;padding:18px 0 0!important;margin-bottom:28px!important;color:var(--nero)!important;font-weight:700!important;text-transform:none!important;letter-spacing:0!important;font-size:.95rem!important;}
+body:has(.section-label) .divider{display:none!important;}
+.section-label,.label{display:block!important;border:0!important;border-top:2px solid var(--riga)!important;padding:18px 0 0!important;margin:0 0 28px!important;color:var(--nero)!important;font-family:var(--serif)!important;font-weight:400!important;font-size:1.6rem!important;line-height:1.2!important;text-transform:none!important;letter-spacing:0!important;}
+body.sezioni-numerate{counter-reset:sezione;}
+body.sezioni-numerate .section-label::before{counter-increment:sezione;content:counter(sezione,decimal-leading-zero);display:block;font-family:var(--sans);font-weight:700;font-size:.9rem;margin-bottom:6px;}
+.resources-wrap{padding-top:48px!important;padding-bottom:16px!important;}
+.segno-pagina{display:block;width:48px;height:48px;fill:none;stroke:var(--nero);stroke-width:4.2;margin-bottom:18px;}
+/* la vecchia etichetta piccola in home (.label) non è più usata */
 
 /* ─── SCHEDE: niente fondi colorati, una riga sottile sopra ─── */
 .res-card,.acard,.ev-card,.course-card,.ccard,.teaser-card,.ed-card,.sidebar-card,.aside-card,.ricerca-card,.membership-card,.join-card,.free-inner,.cta-inner,.info-inner,.vision-quote,.vincitore-block,.step,.htag,.news-row,.era-title,.aside-links{
@@ -68,8 +93,19 @@ hr{border:0;border-top:2px solid var(--riga);}
 .res-title{font-family:var(--serif)!important;font-weight:400!important;font-size:1.4rem!important;line-height:1.2!important;}
 .res-icon,.ccard-icon,.course-icon,.info-inner > span:first-child{display:none!important;}
 
+/* Chi siamo: blocchi iniziali e riquadro «Associazione» senza righe doppie */
+.blocks-grid{gap:36px!important;}
+.block-item,.block-item:nth-child(odd),.block-item:nth-child(even){padding:14px 0 0!important;border:0!important;border-top:1px solid var(--riga)!important;}
+.block-label{color:var(--nero)!important;text-transform:none!important;letter-spacing:0!important;font-size:.9rem!important;font-weight:600!important;}
+.block-item h2{font-size:1.4rem!important;}
+.membership-card{border:0!important;padding:0!important;}
+.membership-card > h2{font-size:1.4rem!important;margin-bottom:20px!important;}
+.membership-bottom{border:0!important;padding-top:8px!important;}
+.content-wrap + #associati{margin-top:40px;}
+.step-num{font-family:var(--sans)!important;}
+
 /* ─── ETICHETTE E BOLLINI: solo testo ─── */
-.hero-badge,.hero-badge-home,.res-badge,.badge-type,.badge-pdf,.badge-free,.badge-cc,.badge-x,.badge-mint,.badge-violet,.badge-sky,.topic-tag,.res-tag,.ev-tag,.acard-per,.article-meta{
+.teaser-tag,.ccard-label,.course-tag,.tag,.hero-badge,.hero-badge-home,.res-badge,.badge-type,.badge-pdf,.badge-free,.badge-cc,.badge-x,.badge-mint,.badge-violet,.badge-sky,.topic-tag,.res-tag,.ev-tag,.acard-per,.article-meta{
     background:transparent!important;border:0!important;border-radius:0!important;padding:0!important;color:var(--nero)!important;text-transform:none!important;letter-spacing:0!important;font-weight:600!important;font-size:.9rem!important;
 }
 .res-meta{gap:4px 14px!important;}
@@ -78,7 +114,7 @@ hr{border:0;border-top:2px solid var(--riga);}
 .hero-badge::before{display:none!important;}
 
 /* ─── PULSANTI: testo nero con freccia ─── */
-.btn,.btn-dl,.btn-course,.btn-x,.btn-fill,.btn-dark,.btn-sage,.btn-rose,.btn-slate,.btn-terracotta,.btn-outline,.back-link{
+.teaser-link,.btn,.btn-dl,.btn-course,.btn-x,.btn-fill,.btn-dark,.btn-sage,.btn-rose,.btn-slate,.btn-terracotta,.btn-outline,.back-link{
     background:transparent!important;color:var(--nero)!important;border:0!important;border-radius:0!important;padding:0!important;box-shadow:none!important;
     font-family:var(--sans)!important;font-weight:700!important;font-size:.95rem!important;text-transform:none!important;letter-spacing:0!important;text-decoration:none!important;
 }

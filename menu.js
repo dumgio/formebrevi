@@ -24,10 +24,16 @@
       </div>
       <div class="nav-links" id="nmenu" role="navigation" aria-label="Menu principale">
         <a href="/index.html"          data-page="index.html">Home</a>
-        <a href="/filosofia.html"      data-page="filosofia.html">Filosofia e scrittura</a>
-        <a href="/chi-educa.html"      data-page="chi-educa.html">Chi educa</a>
-        <a href="/famiglie.html"       data-page="famiglie.html">Famiglie e ragazzi</a>
+        <div class="voce-aree">
+          <button type="button" class="aree-btn" id="areebtn" aria-expanded="false" aria-controls="areemenu">Aree di intervento <span aria-hidden="true">▾</span></button>
+          <div class="aree-menu" id="areemenu">
+            <a href="/filosofia.html"  data-page="filosofia.html">Filosofia e scrittura</a>
+            <a href="/chi-educa.html"  data-page="chi-educa.html">Chi educa</a>
+            <a href="/famiglie.html"   data-page="famiglie.html">Famiglie e ragazzi</a>
+          </div>
+        </div>
         <a href="/chi-siamo.html"      data-page="chi-siamo.html">Chi siamo</a>
+        <a href="/notizie.html"        data-page="notizie.html">Notizie</a>
         <a href="/contatti.html"       data-page="contatti.html">Contatti</a>
         <a href="/iscriviti.html"      data-page="iscriviti.html" class="nav-cta">Associati</a>
       </div>
@@ -40,7 +46,6 @@
     'premio.html':          'chi-siamo.html',
     'storia.html':          'chi-siamo.html',
     'edizioni.html':        'chi-siamo.html',
-    'notizie.html':         'chi-siamo.html',
     'call-for-papers.html': 'filosofia.html',
     'kalmly.html':          'famiglie.html',
     'stoicismo.html':       'filosofia.html',
@@ -65,7 +70,7 @@
 
     var activePage;
     if (path.indexOf('/articoli/') !== -1) {
-      activePage = 'chi-siamo.html';
+      activePage = 'notizie.html';
     } else if (Object.prototype.hasOwnProperty.call(PARENT_MAP, page)) {
       activePage = PARENT_MAP[page];
     } else {
@@ -75,6 +80,31 @@
     if (activePage) {
       var activeLink = navEl.querySelector('[data-page="' + activePage + '"]');
       if (activeLink) activeLink.classList.add('cur');
+      if (activeLink && activeLink.closest('.aree-menu')) {
+        document.getElementById('areebtn').classList.add('cur');
+      }
+    }
+
+    /* Sottomenu «Aree di intervento»: si apre al passaggio del mouse
+       (vedi tema.css) e al clic, per chi usa tastiera o schermo touch. */
+    var areeBtn = document.getElementById('areebtn');
+    var areeMenu = document.getElementById('areemenu');
+    areeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var aperto = areeMenu.classList.toggle('aperto');
+      areeBtn.setAttribute('aria-expanded', String(aperto));
+    });
+    document.addEventListener('click', function (e) {
+      if (!areeMenu.contains(e.target)) {
+        areeMenu.classList.remove('aperto');
+        areeBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    /* Pagine con più sezioni: i titoli delle sezioni vengono numerati (01, 02…). */
+    if (document.querySelectorAll('.section-label').length > 1 &&
+        !document.body.classList.contains('senza-numeri')) {
+      document.body.classList.add('sezioni-numerate');
     }
 
     var hbtn  = document.getElementById('hbtn');
@@ -98,6 +128,11 @@
     });
 
     document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && areeMenu.classList.contains('aperto')) {
+        areeMenu.classList.remove('aperto');
+        areeBtn.setAttribute('aria-expanded', 'false');
+        areeBtn.focus();
+      }
       if (e.key === 'Escape' && nmenu.classList.contains('active')) {
         hbtn.classList.remove('open');
         nmenu.classList.remove('active');
