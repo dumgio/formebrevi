@@ -1,11 +1,11 @@
 /* Formebrevi APS — tema «locandina» (dal 09/10/2026).
-   Fondo rosa cipria pieno, solo nero, righe sottili, frecce lunghe.
+   Fondo bianco caldo, solo nero, righe sottili, frecce lunghe.
    Caricato per ultimo in ogni pagina, dopo gli stili interni, così li sostituisce
    senza toccarli: schede, pulsanti ed etichette colorate diventano testo e righe nere. */
 
 :root{
     --violet:#111111;--sky:#3B3333;--coral:#111111;--lime-dk:#111111;
-    --fondo:#F9E3DF;--nero:#111111;--grigio:#3B3333;--riga:#111111;
+    --fondo:#FFFDF9;--nero:#111111;--grigio:#3B3333;--riga:#111111;
     --sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
     --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
     /* variabili di common.css e articolo.css riportate al nero */

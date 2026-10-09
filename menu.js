@@ -29,7 +29,7 @@
           <div class="aree-menu" id="areemenu">
             <a href="/filosofia.html"  data-page="filosofia.html">Filosofia e scrittura</a>
             <a href="/chi-educa.html"  data-page="chi-educa.html">Chi educa</a>
-            <a href="/famiglie.html"   data-page="famiglie.html">Famiglie e ragazzi</a>
+            <a href="/famiglie.html"   data-page="famiglie.html">Famiglie e scuola</a>
           </div>
         </div>
         <a href="/chi-siamo.html"      data-page="chi-siamo.html">Chi siamo</a>
