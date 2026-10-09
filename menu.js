@@ -13,9 +13,6 @@
      ───────────────────────────────────────────── */
   const NAV_HTML = `
     <div class="nav-inner">
-      <div class="testata" aria-hidden="true">
-        <span class="lettera">F</span><span class="linea"></span><span class="lettera">B</span>
-      </div>
       <div class="sotto">
         <a href="/index.html" class="nav-logo marchio" aria-label="Formebrevi APS, torna alla home">
           <img src="/img/simbolo.png" alt=""><span>Formebrevi APS</span>
