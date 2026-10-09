@@ -1,12 +1,12 @@
 /**
- * menu.js — Formebrevi APS
+ * menu.js: Formebrevi APS
  * Gestione centralizzata della barra di navigazione.
  * Da includere in ogni pagina con: <script src="menu.js"></script>
  */
 (function () {
 
   /* ─────────────────────────────────────────────
-     1. HTML del menu — modifica qui una volta sola
+     1. HTML del menu: modifica qui una volta sola
         I link sono root-relative (iniziano con "/") così
         il menu funziona identico da qualunque sottocartella
         (es. /articoli/...).
