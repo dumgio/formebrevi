@@ -132,3 +132,7 @@ footer a:hover{text-decoration:underline!important;}
 @media(max-width:640px){.sotto .dx{display:none;}}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+
+/* Notizie: elenco largo come la pagina, una sola riga spessa in cima */
+.news-wrap{max-width:1080px!important;}
+.news-wrap > .news-row:first-of-type{border-top-width:2px!important;}
