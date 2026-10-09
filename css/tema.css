@@ -18,8 +18,6 @@
 
 /* Colori di fondo a scelta del visitatore (pallini nell'intestazione, scelta salvata nel browser).
    Senza scelta il sito è azzurro Astrolabio. */
-:root[data-fondo="rosa"]{--fondo:#F9D5D3;}
-:root[data-fondo="acqua"]{--fondo:#BFE1D8;}
 :root[data-fondo="avorio"]{--fondo:#EFE9DC;}
 .colori{display:flex;align-items:center;gap:8px;margin-left:auto;}
 .colori button{width:16px;height:16px;border-radius:50%;border:1px solid var(--nero);background:var(--c);padding:0;cursor:pointer;}

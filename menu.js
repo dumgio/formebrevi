@@ -19,8 +19,6 @@
         </a>
         <div class="colori" role="group" aria-label="Colore del sito">
           <button type="button" data-fondo="" style="--c:#C3D8E3" aria-label="Azzurro" title="Azzurro"></button>
-          <button type="button" data-fondo="rosa" style="--c:#F9D5D3" aria-label="Rosa" title="Rosa"></button>
-          <button type="button" data-fondo="acqua" style="--c:#BFE1D8" aria-label="Verde acqua" title="Verde acqua"></button>
           <button type="button" data-fondo="avorio" style="--c:#EFE9DC" aria-label="Avorio" title="Avorio"></button>
         </div>
         <span class="dx">Associazione di promozione sociale<br>Caltanissetta</span>
@@ -91,7 +89,7 @@
       }
     }
 
-    /* Colore del sito: il visitatore sceglie uno dei quattro fondi, il browser lo ricorda. */
+    /* Colore del sito: il visitatore sceglie fra azzurro e avorio, il browser lo ricorda. */
     var bottoniColore = navEl.querySelectorAll('.colori button');
     function segnaColore() {
       var attuale = document.documentElement.getAttribute('data-fondo') || '';
