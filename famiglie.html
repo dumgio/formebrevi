@@ -24,139 +24,78 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/common.css">
-    <style>
-                                                                                                                                                                .page-hero{max-width:1080px;margin:0 auto;padding:36px 24px 32px;animation:up .55s ease both;}
-        .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:100px;padding:6px 14px;margin-bottom:20px;color:#111111;background:#DEE7D3;}
-        .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#111111;flex-shrink:0;}
-        .page-hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;color:var(--ink);margin-bottom:16px;}
-        .page-hero .sub{font-size:1.05rem;color:var(--muted);line-height:1.65;max-width:560px;}
-        .divider{max-width:1080px;margin:0 auto;padding:0 24px;}
-        .divider::after{content:'';display:block;height:1px;background:var(--border);}
-        .section-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:20px;display:block;padding-bottom:12px;border-bottom:1px solid var(--border);}
-        .resources-wrap{max-width:1080px;margin:0 auto;padding:40px 24px 8px;}
-        .resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-        .res-card{border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s;}
-        .res-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.08);}
-        .res-card.green {background:#F1DCC4;border:1px solid #111111;}
-        .res-card.blue  {background:#DCE4E4;border:1px solid #111111;}
-        .res-card.orange{background:#F5E7C4;border:1px solid #111111;}
-        .res-card.teal  {background:#E3E8D2;border:1px solid #111111;}
-        .res-card.violet{background:#F3DBD8;border:1px solid #111111;}
-        .res-card.mint  {background:#DEE7D3;border:1px solid #111111;}
-        .res-card.amber {background:#F0E4C2;border:1px solid #111111;}
-        .res-tag {font-size:0.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);}
-        .res-icon{font-size:1.7rem;line-height:1;}
-        .res-title{font-size:1rem;font-weight:700;color:var(--ink);line-height:1.25;}
-        .res-desc {font-size:0.86rem;color:var(--muted);line-height:1.65;flex-grow:1;}
-        .res-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px;}
-        .res-badge{display:inline-flex;align-items:center;font-size:0.67rem;font-weight:600;padding:3px 9px;border-radius:100px;}
-        .badge-pdf {background:#fff;color:#111111;border:1px solid #E8D5A8;}
-        .badge-free{background:#F1DCC4;color:#111111;border:1px solid #111111;}
-        .badge-cc  {background:#E9E1D2;color:#111111;border:1px solid var(--border);}
-        .badge-type{background:#E9E1D2;color:#111111;border:1px solid var(--border);}
-        .btn-dl{display:inline-flex;align-items:center;gap:7px;background:#111111;color:#fff;font-size:0.8rem;font-weight:600;padding:10px 20px;border-radius:100px;text-decoration:none;transition:background .18s;align-self:flex-start;margin-top:4px;}
-        .btn-dl:hover{background:#111111;}
-        .btn-dl svg{width:13px;height:13px;flex-shrink:0;}
-        .btn-dl.orange{background:#111111;}.btn-dl.orange:hover{background:#111111;}
-        .btn-dl.blue  {background:#111111;}.btn-dl.blue:hover  {background:#111111;}
-        .btn-dl.teal  {background:#111111;}.btn-dl.teal:hover  {background:#111111;}
-        .btn-dl.violet{background:#111111;}.btn-dl.violet:hover{background:#111111;}
-        .btn-dl.mint  {background:#111111;}.btn-dl.mint:hover  {background:#111111;}
-        .btn-dl.amber {background:#111111;}.btn-dl.amber:hover {background:#111111;}
-        .info-strip{max-width:1080px;margin:0 auto;padding:40px 24px 52px;}
-        .info-inner{background:#DEE7D3;border-radius:16px;padding:22px 30px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-        .info-inner p{font-size:0.88rem;color:var(--muted);line-height:1.65;flex:1;min-width:200px;}
-        .info-inner a{color:#111111;font-weight:600;text-decoration:none;}
-        .info-inner a:hover{text-decoration:underline;}
-                        .resources-grid.solo{grid-template-columns:1fr;}
-        .resources-grid.solo .res-desc{max-width:680px;}
-        .resources-grid.duo{grid-template-columns:repeat(2,1fr);}
-        @media(max-width:900px){.resources-grid{grid-template-columns:repeat(2,1fr);}}
-        @media(max-width:680px){
-            .resources-grid,.resources-grid.duo{grid-template-columns:1fr;}
-                                                        }
-    </style>
+
     <link rel="stylesheet" href="/css/tema.css">
+    <link rel="stylesheet" href="/css/sezioni.css">
 </head>
 <body>
 
 <nav class="nav"></nav>
 
-<header class="page-hero">
-    <svg class="segno-pagina" viewBox="0 0 100 100" aria-hidden="true"><path d="M8 94 C8 16 68 16 68 94"/><path d="M38 94 C38 44 92 44 92 94"/></svg>
-    <span class="hero-badge">Per le famiglie e i ragazzi</span>
-    <h1>Famiglie e ragazzi</h1>
-    <p class="sub">Strumenti per accompagnare bambini e ragazzi: nelle difficoltà di ogni giorno, davanti alle notizie, nelle scelte di scuola e di vita.</p>
+<div class="pagina">
+
+<header class="apertura">
+    <div>
+        <svg class="segno-pagina" viewBox="0 0 100 100" aria-hidden="true"><path d="M8 94 C8 16 68 16 68 94"/><path d="M38 94 C38 44 92 44 92 94"/></svg>
+        <span class="per">Per le famiglie e i ragazzi</span>
+        <h1>Famiglie e ragazzi</h1>
+        <p class="sotto-titolo">Strumenti per accompagnare bambini e ragazzi: nelle difficoltà di ogni giorno, davanti alle notizie, nelle scelte di scuola e di vita.</p>
+    </div>
+    <nav aria-label="In questa pagina">
+        <p class="indice-titolo">In questa pagina</p>
+        <ul class="indice">
+            <li><a href="#app-gratuita"><span>App gratuita</span><span>⟶</span></a></li>
+            <li><a href="#kit-gratuiti"><span>Kit gratuiti</span><span>⟶</span></a></li>
+        </ul>
+    </nav>
 </header>
 
-<div class="divider"></div>
-
-<div class="resources-wrap">
-    <span class="section-label">App gratuita</span>
-    <div class="resources-grid solo">
-
-        <div class="res-card mint">
-            <span class="res-tag">App gratuita</span>
-            <div class="res-icon">🧠</div>
-            <p class="res-title">Kalmly — ADHD per genitori ed educatori</p>
-            <p class="res-desc">App realizzata da Formebrevi APS per genitori ed educatori di bambini con ADHD: strategie immediate per i momenti difficili e un coach quotidiano. Funziona anche offline.</p>
-            <div class="res-meta">
-                <span class="res-badge badge-type">Web app</span>
-                <span class="res-badge badge-free">Gratuito</span>
+<section class="parte-pagina" id="app-gratuita">
+    <h2 class="titolo-parte">App gratuita</h2>
+    <div class="griglia uno">
+        <div class="voce">
+            <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path d="M4 36 Q27 24 50 36 T96 36"/><path d="M4 58 Q27 46 50 58 T96 58"/><path d="M4 80 Q27 68 50 80 T96 80"/></svg>
+            <div class="corpo">
+                <span class="per">App gratuita</span>
+                <h3>Kalmly — ADHD per genitori ed educatori</h3>
+                <p>App realizzata da Formebrevi APS per genitori ed educatori di bambini con ADHD: strategie immediate per i momenti difficili e un coach quotidiano. Funziona anche offline.</p>
+                <span class="dati">Web app · Gratuito</span>
+                <a class="vai" href="kalmly.html">Scopri Kalmly <span>⟶</span></a>
             </div>
-            <a href="kalmly.html" class="btn-dl mint">
-                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Scopri Kalmly
-            </a>
         </div>
-
     </div>
+</section>
+
+<section class="parte-pagina" id="kit-gratuiti">
+    <h2 class="titolo-parte">Kit gratuiti</h2>
+    <div class="griglia">
+        <div class="voce">
+            <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><circle cx="40" cy="40" r="28"/><path d="M60 60 L92 92"/><path d="M26 32 Q30 22 40 20"/></svg>
+            <div class="corpo">
+                <span class="per">Kit per famiglie e insegnanti</span>
+                <h3>Prima di crederci</h3>
+                <p>Un metodo pratico e alcuni casi reali per riconoscere manipolazione e fake news, da usare insieme ai ragazzi a casa o in classe.</p>
+                <span class="dati">PDF · 6 pag. · Gratuito · CC BY-NC-SA</span>
+                <a class="vai" href="Risorse/prima_di_crederci.pdf" download>Scarica il kit <span>⟶</span></a>
+            </div>
+        </div>
+        <div class="voce">
+            <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42"/><path style="stroke-linejoin:round" d="M50 16 L60 50 L50 84 L40 50 Z"/></svg>
+            <div class="corpo">
+                <span class="per">Kit per famiglie</span>
+                <h3>Orientarsi con metodo</h3>
+                <p>Mappe di valori personali, domande guida ed esercizi di autoconoscenza per affrontare le scelte scolastiche e professionali. Per studenti delle medie e superiori.</p>
+                <span class="dati">PDF · 6 pag. · Gratuito · CC BY-NC-SA</span>
+                <a class="vai" href="Risorse/orientarsi_con_metodo.pdf" download>Scarica il kit <span>⟶</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="nota-finale">
+    <p>Tutti i materiali sono distribuiti con licenza <strong>Creative Commons BY-NC-SA 4.0</strong>: puoi usarli e condividerli liberamente per scopi non commerciali, citando la fonte. Per proporre nuovi materiali o collaborare scrivi a <a href="mailto:formebrevi@gmail.com">formebrevi@gmail.com</a>.</p>
 </div>
 
-<div class="resources-wrap">
-    <span class="section-label">Kit gratuiti</span>
-    <div class="resources-grid duo">
-
-        <div class="res-card mint">
-            <span class="res-tag">Kit per famiglie e insegnanti</span>
-            <div class="res-icon">🔍</div>
-            <p class="res-title">Prima di crederci</p>
-            <p class="res-desc">Un metodo pratico e alcuni casi reali per riconoscere manipolazione e fake news, da usare insieme ai ragazzi a casa o in classe.</p>
-            <div class="res-meta">
-                <span class="res-badge badge-pdf">PDF · 6 pag.</span>
-                <span class="res-badge badge-free">Gratuito</span>
-                <span class="res-badge badge-cc">CC BY-NC-SA</span>
-            </div>
-            <a href="Risorse/prima_di_crederci.pdf" class="btn-dl mint" download>
-                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1v9M4 7l4 4 4-4M2 13h12" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Scarica il kit
-            </a>
-        </div>
-
-        <div class="res-card mint">
-            <span class="res-tag">Kit per famiglie</span>
-            <div class="res-icon">🧭</div>
-            <p class="res-title">Orientarsi con metodo</p>
-            <p class="res-desc">Mappe di valori personali, domande guida ed esercizi di autoconoscenza per affrontare le scelte scolastiche e professionali. Per studenti delle medie e superiori.</p>
-            <div class="res-meta">
-                <span class="res-badge badge-pdf">PDF · 6 pag.</span>
-                <span class="res-badge badge-free">Gratuito</span>
-                <span class="res-badge badge-cc">CC BY-NC-SA</span>
-            </div>
-            <a href="Risorse/orientarsi_con_metodo.pdf" class="btn-dl mint" download>
-                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1v9M4 7l4 4 4-4M2 13h12" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Scarica il kit
-            </a>
-        </div>
-
-    </div>
-</div>
-
-<div class="info-strip">
-    <div class="info-inner">
-        <span style="font-size:1.3rem;flex-shrink:0;">ℹ️</span>
-        <p>Tutti i materiali sono distribuiti con licenza <strong>Creative Commons BY-NC-SA 4.0</strong>: puoi usarli e condividerli liberamente per scopi non commerciali, citando la fonte. Per proporre nuovi materiali o collaborare scrivi a <a href="mailto:formebrevi@gmail.com">formebrevi@gmail.com</a>.</p>
-    </div>
 </div>
 
 <footer>
