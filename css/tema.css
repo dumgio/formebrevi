@@ -32,41 +32,33 @@ p{color:inherit;}
 .marchio{display:flex!important;align-items:center;gap:12px;text-decoration:none;color:var(--nero);}
 .marchio img{width:40px!important;height:auto!important;max-height:none!important;flex:none;}
 .marchio span{white-space:nowrap;}
-.nav-links{display:flex!important;flex-wrap:wrap;gap:6px 22px!important;padding:12px 0 0 22px;}
-.nav-links a{font-size:.95rem!important;font-weight:400!important;color:var(--nero)!important;background:none!important;padding:0!important;border-radius:0!important;letter-spacing:0!important;}
-.nav-links a:hover{text-decoration:underline;text-underline-offset:3px;background:none!important;}
-.nav-links a.cur{font-weight:700!important;}
+/* Menu: una riga di voci; «Aree di intervento» apre un piccolo elenco con le tre sezioni. */
+.nav-links{display:flex!important;flex-direction:row!important;align-items:baseline!important;flex-wrap:wrap;gap:6px 24px!important;position:static!important;background:none!important;border:0!important;box-shadow:none!important;padding:12px 0 0 22px!important;}
+.nav-links a,.aree-btn{font-family:var(--sans)!important;font-size:.95rem!important;font-weight:400!important;color:var(--nero)!important;background:none!important;padding:0!important;border:0!important;border-radius:0!important;letter-spacing:0!important;line-height:1.4;}
+.nav-links a:hover,.aree-btn:hover{text-decoration:underline;text-underline-offset:3px;}
+.nav-links a.cur,.aree-btn.cur{font-weight:700!important;}
 .nav-cta{color:var(--nero)!important;background:none!important;padding:0!important;font-weight:700!important;}
-.hamburger{display:none;}
-.hamburger span{background:var(--nero)!important;height:2px!important;}
-@media(max-width:960px){
-    .sotto{padding-left:0;}
-    .sotto .dx{margin-left:auto;font-size:.85rem;}
-    .hamburger{display:flex!important;}
-    .nav-links{display:none!important;position:absolute!important;top:100%!important;left:24px!important;right:24px!important;background:var(--fondo)!important;border:0!important;border-bottom:2px solid var(--riga)!important;box-shadow:none!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;padding:4px 0 8px!important;margin-top:-1px;}
-    .nav-links.active{display:flex!important;}
-    .nav-links a{padding:12px 0!important;border-bottom:1px solid var(--riga)!important;border-radius:0!important;}
-    .nav-links a:last-child{border-bottom:0!important;}
-}
-
-/* Sottomenu «Aree di intervento» */
+.aree-btn{cursor:pointer;}
+.aree-btn span{font-size:.7em;margin-left:4px;}
 .voce-aree{position:relative;}
-.aree-btn{font:inherit;font-size:.95rem;color:var(--nero);background:none;border:0;padding:0;cursor:pointer;}
-.aree-btn span{font-size:.75em;margin-left:2px;}
-.aree-btn.cur{font-weight:700;}
-.aree-btn:hover{text-decoration:underline;text-underline-offset:3px;}
-.aree-menu{display:none;position:absolute;top:100%;left:-14px;z-index:60;min-width:230px;flex-direction:column;background:var(--fondo);border-top:2px solid var(--riga);border-bottom:1px solid var(--riga);padding:4px 0;margin-top:8px;}
-.aree-menu::before{content:"";position:absolute;left:0;right:0;top:-12px;height:10px;}
+.aree-menu{display:none;position:absolute;top:100%;left:-16px;margin-top:10px;z-index:60;min-width:220px;flex-direction:column;background:var(--fondo);border:1px solid var(--riga);padding:8px 0;}
+.aree-menu::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px;}
 .voce-aree:hover .aree-menu,.voce-aree:focus-within .aree-menu,.aree-menu.aperto{display:flex;}
-.aree-menu a{padding:9px 14px!important;border-bottom:1px solid var(--riga)!important;}
-.aree-menu a:last-child{border-bottom:0!important;}
-@media(max-width:960px){
-    .aree-btn{display:block;width:100%;text-align:left;padding:12px 0;border-bottom:1px solid var(--riga);cursor:default;pointer-events:none;}
+.aree-menu a{padding:7px 16px!important;}
+.hamburger{display:none!important;}
+.hamburger span{background:var(--nero)!important;height:2px!important;}
+
+@media(max-width:760px){
+    .sotto{padding-left:0;}
+    .hamburger{display:flex!important;}
+    .nav-links{display:none!important;position:absolute!important;top:100%!important;left:24px!important;right:24px!important;z-index:99;background:var(--fondo)!important;border-bottom:2px solid var(--riga)!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;padding:10px 0 14px!important;}
+    .nav-links.active{display:flex!important;}
+    .nav-links a,.aree-btn{display:block;padding:9px 0!important;text-align:left;}
+    .aree-btn{cursor:default;pointer-events:none;}
     .aree-btn span{display:none;}
-    .aree-menu{display:flex!important;position:static;border:0;margin:0;padding:0 0 0 18px;min-width:0;}
+    .aree-menu,.aree-menu.aperto{display:flex!important;position:static;margin:0;border:0;padding:0 0 0 18px;min-width:0;}
     .aree-menu::before{display:none;}
-    .aree-menu a{padding:10px 0!important;}
-    .voce-aree{border-bottom:1px solid var(--riga);}
+    .aree-menu a{padding:7px 0!important;}
 }
 
 /* ─── RIGHE ─── */
