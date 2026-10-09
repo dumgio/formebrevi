@@ -61,8 +61,8 @@
         .freccia{display:inline-flex;gap:10px;align-items:baseline;font-weight:700;text-decoration:none;margin-top:30px;font-size:1.05rem;}
         .freccia span,.vai span,.azioni a span{font-family:var(--serif);font-weight:400;font-size:1.25em;display:inline-block;transition:transform .2s;}
         .freccia:hover span,a.voce:hover .vai span{transform:translateX(6px);}
-        .foto{margin:0;}
-        .foto img{display:block;width:100%;height:auto;}
+        .foto{margin:0;background:var(--fondo);transition:background-color .3s;}
+        .foto img{display:block;width:100%;height:auto;mix-blend-mode:multiply;}
         .blocco{border-top:2px solid var(--riga);padding:18px 0 56px;}
         .etichetta{font-weight:700;font-size:.95rem;margin-bottom:28px;}
         .tre{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;}
@@ -93,6 +93,7 @@
             .parte{grid-template-columns:1fr;}
         }
     </style>
+    <script>try{var f=localStorage.getItem("fb-fondo");if(f)document.documentElement.setAttribute("data-fondo",f)}catch(e){}</script>
     <link rel="stylesheet" href="/css/tema.css">
 </head>
 <body>

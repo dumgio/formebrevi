@@ -5,7 +5,7 @@
 
 :root{
     --violet:#111111;--sky:#3B3333;--coral:#111111;--lime-dk:#111111;
-    --fondo:#F9D5D3;--nero:#111111;--grigio:#3B3333;--riga:#111111;
+    --fondo:#C3D8E3;--nero:#111111;--grigio:#3B3333;--riga:#111111;
     --sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
     --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
     /* variabili di common.css e articolo.css riportate al nero */
@@ -15,6 +15,18 @@
     --border:var(--nero);
     --f:var(--sans);--f-display:var(--serif);--font-sans:var(--sans);--font-serif:var(--serif);
 }
+
+/* Colori di fondo a scelta del visitatore (pallini nell'intestazione, scelta salvata nel browser).
+   Senza scelta il sito è azzurro Astrolabio. */
+:root[data-fondo="rosa"]{--fondo:#F9D5D3;}
+:root[data-fondo="acqua"]{--fondo:#BFE1D8;}
+:root[data-fondo="avorio"]{--fondo:#EFE9DC;}
+.colori{display:flex;align-items:center;gap:8px;margin-left:auto;}
+.colori button{width:16px;height:16px;border-radius:50%;border:1px solid var(--nero);background:var(--c);padding:0;cursor:pointer;}
+.colori button[aria-pressed="true"]{box-shadow:0 0 0 2px var(--fondo),0 0 0 3px var(--nero);}
+.colori button:focus-visible{outline:2px solid var(--nero);outline-offset:3px;}
+.sotto .dx{margin-left:8px;}
+body{transition:background-color .3s;}
 
 body{background:var(--fondo)!important;color:var(--nero);font-family:var(--sans);font-size:17px;line-height:1.45;}
 a{color:inherit;}
