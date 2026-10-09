@@ -56,7 +56,7 @@
         .passo p{color:var(--grigio);font-size:1rem;}
         .passo a{text-decoration:underline;text-underline-offset:3px;}
         .azione{display:inline-flex;gap:10px;align-items:baseline;margin-top:36px;font-family:var(--serif);font-size:1.5rem;text-decoration:none;color:var(--nero);}
-        .pagina + footer{margin-top:0!important;}
+        main:has(> .pagina:last-child) + footer{margin-top:0!important;}
         @media(max-width:860px){.quattro{grid-template-columns:repeat(2,minmax(0,1fr));}}
         @media(max-width:760px){
             .apertura{grid-template-columns:1fr;gap:36px;padding:40px 0 40px;}
@@ -69,6 +69,7 @@
 <body>
 
 <nav class="nav"></nav>
+<main>
 
 <div class="pagina">
 
@@ -163,6 +164,8 @@
 </section>
 
 </div>
+
+</main>
 
 <footer>
     <p><strong>Formebrevi APS</strong><br>

@@ -32,7 +32,7 @@
 .nota-finale{border-top:2px solid var(--riga);border-bottom:2px solid var(--riga);padding:22px 0;margin-bottom:8px;}
 .nota-finale p{color:var(--grigio);max-width:80ch;}
 .nota-finale a{color:var(--nero);font-weight:600;}
-.pagina + footer{border-top:0!important;margin-top:24px!important;}
+main:has(> .pagina:last-child) + footer{border-top:0!important;margin-top:24px!important;}
 
 @media(max-width:760px){
     .apertura{grid-template-columns:1fr;gap:36px;padding:40px 0;}
