@@ -72,7 +72,9 @@
         .voce h2{font-size:1.65rem;line-height:1.15;}
         .voce p{color:var(--grigio);font-size:1rem;max-width:42ch;flex-grow:1;}
         .voce .vai{font-weight:700;font-size:.95rem;margin-top:8px;}
-        .segno{width:40px;height:40px;fill:none;stroke:var(--nero);stroke-width:4.2;margin-bottom:10px;}
+        .segno{width:40px;height:40px;fill:none;stroke:var(--nero);stroke-width:4.2;margin-bottom:10px;transition:transform .35s ease;}
+        a.voce:hover .segno,a.voce:focus-visible .segno{transform:translateX(14px);}
+        @media (prefers-reduced-motion:reduce){.segno{transition:none;}}
         .voce.con-segno{flex-direction:row;align-items:flex-start;gap:20px;}
         .voce.con-segno .segno{flex:none;margin:2px 0 0;}
         .corpo{display:flex;flex-direction:column;gap:8px;min-width:0;flex:1;}
