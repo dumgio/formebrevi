@@ -63,18 +63,26 @@
         .freccia:hover span,a.voce:hover .vai span{transform:translateX(6px);}
         .foto{margin:0;background:var(--fondo);transition:background-color .3s;}
         .foto img{display:block;width:100%;height:auto;}
-        .blocco{border-top:2px solid var(--riga);padding:18px 0 56px;}
-        .etichetta{font-weight:700;font-size:.95rem;margin-bottom:28px;}
-        .tre{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;}
-        .due{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;}
-        .voce{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--riga);padding-top:14px;text-decoration:none;color:var(--nero);}
-        .voce .per{font-size:.9rem;font-weight:600;}
-        .voce h2{font-size:1.65rem;line-height:1.15;}
+        .blocco{padding:8px 0 56px;}
+        .etichetta{font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--grigio);margin-bottom:24px;}
+        .tre{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+        .due{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+        /* Schede: pastello col colore dell'area per le sezioni, bianche con bordo leggero per «In evidenza» */
+        .voce{display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #E6E0D6;border-radius:16px;padding:22px 22px 24px;text-decoration:none;color:var(--nero);min-width:0;transition:transform .25s,box-shadow .25s;}
+        .voce.a1{--c:var(--c1);background:var(--p1);border:0;}
+        .voce.a2{--c:var(--c2);background:var(--p2);border:0;}
+        .voce.a3{--c:var(--c3);background:var(--p3);border:0;}
+        a.voce:hover,a.voce:focus-visible{transform:translateY(-4px);box-shadow:0 10px 24px rgba(17,17,17,.08);}
+        .voce .per{font-size:.82rem;font-weight:600;align-self:flex-start;background:rgba(255,255,255,.75);border-radius:999px;padding:3px 11px;}
+        .voce h2{font-family:var(--sans)!important;font-weight:700!important;letter-spacing:-.01em!important;font-size:1.5rem;line-height:1.15;}
+        .voce.a1 .fr-c,.voce.a2 .fr-c,.voce.a3 .fr-c{color:var(--c);}
+        mark{background:linear-gradient(transparent 58%,var(--evid) 58%);color:inherit;padding:0 .08em;}
+        mark:nth-of-type(2){background:linear-gradient(transparent 58%,var(--evid2) 58%);}
+        mark:nth-of-type(3){background:linear-gradient(transparent 58%,var(--evid3) 58%);}
         .voce p{color:var(--grigio);font-size:1rem;max-width:42ch;flex-grow:1;}
         .voce .vai{font-weight:700;font-size:.95rem;margin-top:8px;}
-        .segno{width:40px;height:40px;fill:none;stroke:var(--nero);stroke-width:4.2;margin-bottom:10px;transition:transform .35s ease;}
-        a.voce:hover .segno,a.voce:focus-visible .segno{transform:translateX(14px);}
-        @media (prefers-reduced-motion:reduce){.segno{transition:none;}}
+        .segno{width:40px;height:40px;fill:none;stroke:var(--c,var(--nero));stroke-width:4.2;margin-bottom:10px;}
+        @media (prefers-reduced-motion:reduce){.voce{transition:none;}a.voce:hover,a.voce:focus-visible{transform:none;}}
         .voce.con-segno{flex-direction:row;align-items:flex-start;gap:20px;}
         .voce.con-segno .segno{flex:none;margin:2px 0 0;}
         .corpo{display:flex;flex-direction:column;gap:8px;min-width:0;flex:1;}
@@ -83,7 +91,7 @@
         .azioni a{font-weight:700;font-size:.95rem;text-decoration:none;}
         .azioni a:hover{text-decoration:underline;text-underline-offset:3px;}
         .indirizzo{font-size:.9rem;color:var(--grigio);}
-        .parte{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end;border-top:2px solid var(--riga);border-bottom:2px solid var(--riga);padding:28px 0;}
+        .parte{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end;border-top:1px solid #D9D3C9;border-bottom:1px solid #D9D3C9;padding:28px 0;}
         .parte h2{font-family:var(--sans)!important;font-weight:700!important;font-size:1.6rem;line-height:1.1;margin-bottom:8px;}
         .parte p{color:var(--grigio);max-width:56ch;}
         .parte a{font-family:var(--serif);font-size:1.5rem;text-decoration:none;white-space:nowrap;}
@@ -107,7 +115,7 @@
   <section class="apertura">
     <div class="testo">
       <h1>Formebrevi</h1>
-      <p class="sotto-titolo">Promuoviamo la cultura del dialogo, la lettura e la filosofia come pratiche di sviluppo della persona e della comunità.</p>
+      <p class="sotto-titolo">Promuoviamo la cultura del <mark>dialogo</mark>, la <mark>lettura</mark> e la <mark>filosofia</mark> come pratiche di sviluppo della persona e della comunità.</p>
       <p class="serif">A ogni età, dove le persone si incontrano.</p>
       <p class="nota">Incontri, corsi di formazione, pubblicazioni e progetti educativi.</p>
       <a class="freccia" href="chi-siamo.html">La nostra visione <span>⟶</span></a>
@@ -118,26 +126,26 @@
   <section class="blocco">
     <p class="etichetta">Le nostre sezioni</p>
     <div class="tre">
-      <a class="voce" href="filosofia.html">
+      <a class="voce a1" href="filosofia.html">
         <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path d="M16 8 Q30 64 64 94"/><path d="M84 8 Q70 64 36 94"/><path d="M50 4 Q47 50 50 96"/></svg>
         <span class="per">Per chi vuole pensare</span>
         <h2>Filosofia e scrittura</h2>
         <p>La filosofia come pratica di ogni giorno: leggere gli antichi, dialogare, scrivere. Stoicismo quotidiano, dialogo filosofico, scrittura riflessiva, ricerca.</p>
-        <span class="vai">Vai alla sezione <span>⟶</span></span>
+        <span class="vai">Vai alla sezione <span class="fr-c">⟶</span></span>
       </a>
-      <a class="voce" href="chi-educa.html">
+      <a class="voce a2" href="chi-educa.html">
         <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path style="stroke-linecap:round;stroke-linejoin:round" d="M13.0 44.5 C21.4 39.7 51.0 8.6 63.3 15.6 C75.7 22.6 96.3 84.0 87.1 86.5 C77.8 89.0 9.1 42.8 8.0 30.7 C6.9 18.5 69.9 5.5 80.4 13.5 C90.8 21.5 80.9 71.0 70.6 78.7 C60.4 86.3 15.3 70.1 18.8 59.7 C22.4 49.3 79.8 23.6 92.0 16.4"/></svg>
         <span class="per">Per insegnanti, educatori, operatori</span>
         <h2>Educazione e sociale</h2>
         <p>Formazione e materiali per chi lavora nella scuola, nell'educazione e nel sociale: corsi di progettazione, kit pronti per la classe.</p>
-        <span class="vai">Vai alla sezione <span>⟶</span></span>
+        <span class="vai">Vai alla sezione <span class="fr-c">⟶</span></span>
       </a>
-      <a class="voce" href="famiglie.html">
+      <a class="voce a3" href="famiglie.html">
         <svg class="segno" viewBox="0 0 100 100" aria-hidden="true"><path d="M8 94 C8 16 68 16 68 94"/><path d="M38 94 C38 44 92 44 92 94"/></svg>
         <span class="per">Per le famiglie e la scuola</span>
         <h2>Famiglie e scuola</h2>
         <p>Strumenti per accompagnare bambini e ragazzi: Kalmly per l'ADHD, kit per riconoscere le notizie false e per orientarsi nelle scelte.</p>
-        <span class="vai">Vai alla sezione <span>⟶</span></span>
+        <span class="vai">Vai alla sezione <span class="fr-c">⟶</span></span>
       </a>
     </div>
   </section>
@@ -152,7 +160,6 @@
         <p>Formebrevi promuove il dialogo filosofico come pratica di crescita reciproca. Le sessioni si svolgono online e sono gratuite per chi è associato (la quota annuale è di 10€) e si possono prenotare in qualsiasi momento.</p>
         <div class="azioni">
           <a href="mailto:formebrevi@gmail.com?subject=Prenotazione%20sessione%20di%20Dialogo%20Filosofico">Prenota una sessione <span>⟶</span></a>
-          <a href="iscriviti.html">Iscriviti a Formebrevi <span>⟶</span></a>
         </div>
         <span class="indirizzo">formebrevi@gmail.com</span>
         </div>

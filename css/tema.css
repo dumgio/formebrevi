@@ -5,7 +5,11 @@
 
 :root{
     --violet:#111111;--sky:#3B3333;--coral:#111111;--lime-dk:#111111;
-    --fondo:#FFFDF9;--nero:#111111;--grigio:#3B3333;--riga:#111111;
+    --fondo:#FFFDF9;
+    /* colori delle tre aree (dall'11/10/2026): pieno per simboli e frecce, pastello per le schede */
+    --c1:#2B4BFF;--c2:#FF5A1F;--c3:#00A85A;--p1:#E4E9FF;--p2:#FFE7DC;--p3:#D9F3E5;
+    /* evidenziatore: giallo per il menu, tre colori per le parole della home */
+    --evid:#FFE600;--evid2:#9BF0C4;--evid3:#A9DCFF;--nero:#111111;--grigio:#3B3333;--riga:#111111;
     --sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
     --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
     /* variabili di common.css e articolo.css riportate al nero */
@@ -37,7 +41,7 @@ p{color:inherit;}
 .nav-links{display:flex!important;flex-direction:row!important;align-items:baseline!important;flex-wrap:wrap;gap:6px 24px!important;position:static!important;background:none!important;border:0!important;box-shadow:none!important;padding:12px 0 0 22px!important;}
 .nav-links a,.aree-btn{font-family:var(--sans)!important;font-size:.95rem!important;font-weight:400!important;color:var(--nero)!important;background:none!important;padding:0!important;border:0!important;border-radius:0!important;letter-spacing:0!important;line-height:1.4;}
 .nav-links a:hover,.aree-btn:hover{text-decoration:underline;text-underline-offset:3px;}
-.nav-links a.cur,.aree-btn.cur{font-weight:700!important;}
+.nav-links a.cur,.aree-btn.cur{font-weight:700!important;background:linear-gradient(transparent 60%,var(--evid) 60%)!important;}
 .nav-cta{color:var(--nero)!important;background:none!important;padding:0!important;font-weight:700!important;}
 .aree-btn{cursor:pointer;}
 .aree-btn span{font-size:.7em;margin-left:4px;}
@@ -136,3 +140,11 @@ footer a:hover{text-decoration:underline!important;}
 /* Notizie: elenco largo come la pagina, una sola riga spessa in cima */
 .news-wrap{max-width:1080px!important;}
 .news-wrap > .news-row:first-of-type{border-top-width:2px!important;}
+
+/* Colore dell'area nelle pagine Filosofia e scrittura (area-1), Educazione e sociale (area-2), Famiglie e scuola (area-3) */
+body.area-1{--c:var(--c1);}
+body.area-2{--c:var(--c2);}
+body.area-3{--c:var(--c3);}
+body[class*="area-"] .segno-pagina,body[class*="area-"] .segno{stroke:var(--c);}
+body[class*="area-"] .vai span,body[class*="area-"] .indice a span:last-child{color:var(--c);}
+@media(max-width:760px){.nav-links a.cur,.aree-btn.cur{width:fit-content;}}
