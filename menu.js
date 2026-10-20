@@ -23,9 +23,10 @@
         </button>
       </div>
       <div class="nav-links" id="nmenu" role="navigation" aria-label="Menu principale">
+        <a href="/famiglie.html"       data-page="famiglie.html" class="area a3">Ragazzi e famiglie</a>
+        <a href="/chi-educa.html"      data-page="chi-educa.html" class="area a2">Scuole ed educatori</a>
         <a href="/filosofia.html"      data-page="filosofia.html" class="area a1">Filosofia e scrittura</a>
-        <a href="/chi-educa.html"      data-page="chi-educa.html" class="area a2">Educazione e sociale</a>
-        <a href="/famiglie.html"       data-page="famiglie.html" class="area a3">Famiglie e scuola</a>
+        <a href="/progetti.html"       data-page="progetti.html">Progetti</a>
         <a href="/notizie.html"        data-page="notizie.html">Notizie</a>
         <a href="/chi-siamo.html"      data-page="chi-siamo.html">Chi siamo</a>
         <a href="/contatti.html"       data-page="contatti.html">Contatti</a>
