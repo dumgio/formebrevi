@@ -1,0 +1,99 @@
+/* Formebrevi APS: grafica ispirata a ilpost.it, versione bianca (dal 20/10/2026).
+   Fondo bianco, titoli Georgia grassetto, testo Red Hat Text, menu Red Hat Display maiuscolo,
+   righe grigio chiaro, pulsanti gialli, piè di pagina grigio. Caricato per ultimo in ogni pagina. */
+
+:root{
+    --fondo:#FFFFFF;--nero:#191B1B;--grigio:#4B5254;--grigio-2:#323839;--riga:#E3E7E7;--piede:#F1F3F3;--giallo:#FFE726;
+    --sans:"Red Hat Text",Arial,sans-serif;--display:"Red Hat Display",Arial,sans-serif;--serif:Georgia,"Times New Roman",serif;
+    --white:var(--fondo);--card-white:var(--fondo);--bg:var(--fondo);
+    --ink:var(--nero);--text:var(--nero);--muted:var(--grigio);--secondary:var(--grigio);--border:var(--riga);
+}
+body{background:var(--fondo)!important;color:var(--nero);font-family:var(--sans);font-size:17px;line-height:1.5;}
+h1,h2,h3{font-family:var(--serif)!important;font-weight:700!important;letter-spacing:0!important;color:var(--nero)!important;}
+h4{font-family:var(--sans)!important;}
+
+/* ─── TESTATA: marchio al centro, menu in maiuscolo sotto ─── */
+.nav-inner{padding:20px 24px 0!important;}
+.nav-inner::before{display:none!important;}
+.sotto{position:relative;justify-content:center!important;padding:6px 0 18px!important;border-bottom:1px solid var(--riga)!important;}
+.sotto .dx{position:absolute;right:0;top:50%;transform:translateY(-60%);font-family:var(--sans);font-weight:400;font-size:.82rem;color:var(--grigio);}
+.marchio{gap:12px!important;}
+.marchio img{width:44px!important;}
+.marchio span{font-family:var(--serif);font-weight:700;font-size:1.75rem;letter-spacing:-.01em;}
+.nav-links{justify-content:center!important;gap:6px 28px!important;padding:12px 0!important;border-bottom:1px solid var(--riga)!important;}
+.nav-links a{font-family:var(--display)!important;font-weight:600!important;font-size:.85rem!important;text-transform:uppercase!important;letter-spacing:.03em!important;color:var(--nero)!important;}
+.nav-links a.area::before{content:"";display:inline-block;width:.55em;height:.55em;margin-right:.45em;vertical-align:.05em;}
+.nav-links a.a1::before{background:var(--c1);}
+.nav-links a.a2::before{background:var(--c2);}
+.nav-links a.a3::before{background:var(--c3);}
+.nav-links a.cur{font-weight:800!important;text-decoration:none!important;box-shadow:inset 0 -3px 0 var(--giallo);}
+.nav-links a.nav-cta{background:var(--giallo)!important;padding:4px 12px!important;border-radius:4px!important;font-weight:800!important;}
+.nav-links a.nav-cta:hover{text-decoration:none!important;filter:brightness(.96);}
+@media(max-width:900px){.sotto .dx{display:none;}}
+@media(max-width:760px){
+    .sotto{justify-content:space-between!important;}
+    .marchio span{font-size:1.4rem;}
+    .nav-links{border-bottom:1px solid var(--riga)!important;padding:8px 0 14px!important;}
+    .nav-links a{font-size:.95rem!important;}
+    .nav-cta{align-self:flex-start;margin-top:8px;}
+}
+
+/* ─── TITOLI DI SEZIONE: maiuscolo grassetto con riga sopra ─── */
+.section-label,.label,.etichetta,.titolo-parte,.indice-titolo{
+    font-family:var(--sans)!important;font-weight:700!important;font-size:1rem!important;text-transform:uppercase!important;
+    letter-spacing:.03em!important;color:var(--nero)!important;border-top:2px solid var(--nero)!important;padding-top:12px!important;margin-bottom:22px!important;
+}
+.indice{border-top:0!important;}
+.parte-pagina{border-top:0!important;}
+hr,.divider::after{background:var(--riga)!important;border-color:var(--riga)!important;}
+
+/* righe sottili delle schede e degli elenchi */
+.res-card,.acard,.ev-card,.course-card,.ccard,.teaser-card,.ed-card,.sidebar-card,.aside-card,.ricerca-card,.step,.news-row,.block-item,.block-item:nth-child(odd),.block-item:nth-child(even),.voce,.indice a{border-color:var(--riga)!important;}
+.join-card,.free-inner,.cta-inner,.info-inner,.vision-quote,.vincitore-block,.nota-finale{border-color:var(--riga)!important;}
+.res-title,.voce h3,.block-item h2,.article-title{font-family:var(--serif)!important;font-weight:700!important;}
+
+/* ─── PULSANTI GIALLI ─── */
+.btn-fill,.btn-dark,.btn-course,.btn-dl{background:var(--giallo)!important;padding:9px 16px!important;border-radius:4px!important;}
+.btn-fill:hover,.btn-dark:hover,.btn-course:hover,.btn-dl:hover{text-decoration:none!important;background:var(--giallo)!important;filter:brightness(.96);}
+
+/* ─── HOME ─── */
+.apertura{padding:48px 0 48px!important;}
+.testo .sotto-titolo{font-family:var(--serif)!important;font-weight:700!important;font-size:clamp(1.4rem,2.4vw,1.75rem)!important;line-height:1.25!important;max-width:30ch;}
+.testo .serif{font-family:var(--serif);font-weight:400;font-size:1.2rem!important;margin-top:18px!important;}
+.testo .nota{color:var(--grigio);}
+mark,mark:nth-of-type(2),mark:nth-of-type(3){background:none!important;}
+.freccia{background:var(--giallo);padding:9px 16px;border-radius:4px;}
+.freccia span{font-family:var(--sans)!important;}
+.ultime{padding-bottom:48px!important;}
+.elenco-notizie{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;}
+.notizia{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--nero);border-top:1px solid var(--riga);padding-top:12px;}
+.notizia .data{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:var(--grigio);}
+.notizia .titolo{font-family:var(--serif);font-weight:700;font-size:1.15rem;line-height:1.25;}
+.notizia:hover .titolo{text-decoration:underline;text-underline-offset:3px;}
+.tutte{display:inline-block;margin-top:22px;font-weight:700;font-size:.95rem;text-decoration:none;color:var(--nero);}
+.tutte:hover{text-decoration:underline;text-underline-offset:3px;}
+.voce,.voce.a1,.voce.a2,.voce.a3{background:var(--fondo)!important;border:0!important;border-top:1px solid var(--riga)!important;border-radius:0!important;padding:14px 0 0!important;}
+a.voce:hover,a.voce:focus-visible{transform:none!important;box-shadow:none!important;}
+a.voce:hover h2{text-decoration:underline;text-underline-offset:3px;}
+.voce h2{font-family:var(--serif)!important;font-weight:700!important;font-size:1.4rem!important;}
+.voce .per{background:none!important;padding:0!important;font-size:.8rem!important;font-weight:700!important;text-transform:uppercase;letter-spacing:.03em;color:var(--grigio);}
+.voce.a1 h2::before,.voce.a2 h2::before,.voce.a3 h2::before{content:"";display:inline-block;width:.5em;height:.5em;margin-right:.4em;vertical-align:.08em;background:var(--c);}
+.blocco > .tre .segno{display:none;}
+.parte{border-color:var(--riga)!important;}
+.parte h2{font-family:var(--serif)!important;}
+.parte a{font-family:var(--sans)!important;font-weight:700;font-size:1rem!important;background:var(--giallo);padding:10px 18px;border-radius:4px;}
+.parte a:hover{text-decoration:none!important;filter:brightness(.96);}
+@media(max-width:900px){.elenco-notizie{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:560px){.elenco-notizie{grid-template-columns:1fr;gap:16px;}}
+
+/* ─── NOTIZIE ─── */
+.news-row:hover{background:transparent!important;}
+.news-row:hover .news-title{text-decoration:underline;text-underline-offset:3px;}
+.news-title{font-family:var(--serif)!important;font-size:1.15rem!important;}
+.news-wrap > .news-row:first-of-type{border-top:2px solid var(--nero)!important;}
+
+/* ─── PIÈ DI PAGINA GRIGIO A TUTTA LARGHEZZA ─── */
+footer{max-width:none!important;margin:48px 0 0!important;border-top:0!important;background:var(--piede);padding:32px max(24px,calc((100% - 1032px) / 2)) 40px!important;}
+footer strong{font-family:var(--serif);font-size:1.05rem;}
+main:has(> .pagina:last-child) + footer{margin-top:48px!important;}
+@media(max-width:1080px){footer{margin:48px 0 0!important;}}
