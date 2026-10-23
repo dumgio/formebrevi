@@ -23,14 +23,19 @@
         </button>
       </div>
       <div class="nav-links" id="nmenu" role="navigation" aria-label="Menu principale">
-        <a href="/famiglie.html"       data-page="famiglie.html" class="area a3">Ragazzi e famiglie</a>
-        <a href="/chi-educa.html"      data-page="chi-educa.html" class="area a2">Scuole ed educatori</a>
-        <a href="/filosofia.html"      data-page="filosofia.html" class="area a1">Filosofia e scrittura</a>
-        <a href="/progetti.html"       data-page="progetti.html">Progetti</a>
-        <a href="/notizie.html"        data-page="notizie.html">Notizie</a>
         <a href="/chi-siamo.html"      data-page="chi-siamo.html">Chi siamo</a>
+        <div class="voce-aree">
+          <button type="button" class="aree-btn" id="areebtn" aria-expanded="false" aria-controls="areemenu">Aree di intervento <span aria-hidden="true">▾</span></button>
+          <div class="aree-menu" id="areemenu">
+            <a href="/famiglie.html"   data-page="famiglie.html" class="area a3">Ragazzi e famiglie</a>
+            <a href="/chi-educa.html"  data-page="chi-educa.html" class="area a2">Scuole ed educatori</a>
+            <a href="/filosofia.html"  data-page="filosofia.html" class="area a1">Filosofia e scrittura</a>
+          </div>
+        </div>
+        <a href="/progetti.html"       data-page="progetti.html">Progetti</a>
+        <a href="/corsi.html"          data-page="corsi.html">Corsi</a>
+        <a href="/notizie.html"        data-page="notizie.html">Notizie</a>
         <a href="/contatti.html"       data-page="contatti.html">Contatti</a>
-        <a href="/iscriviti.html"      data-page="iscriviti.html" class="nav-cta">Associati</a>
       </div>
     </div>`;
 
@@ -44,7 +49,6 @@
     'call-for-papers.html': 'filosofia.html',
     'kalmly.html':          'famiglie.html',
     'stoicismo.html':       'filosofia.html',
-    'corsi.html':            null,
     'risorse.html':          null,
     'dialogo.html':          null,
     'privacy.html':          null
@@ -75,7 +79,26 @@
     if (activePage) {
       var activeLink = navEl.querySelector('[data-page="' + activePage + '"]');
       if (activeLink) activeLink.classList.add('cur');
+      if (activeLink && activeLink.closest('.aree-menu')) {
+        document.getElementById('areebtn').classList.add('cur');
+      }
     }
+
+    /* Sottomenu «Aree di intervento»: si apre al passaggio del mouse
+       (vedi tema.css) e al clic, per chi usa tastiera o schermo touch. */
+    var areeBtn = document.getElementById('areebtn');
+    var areeMenu = document.getElementById('areemenu');
+    areeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var aperto = areeMenu.classList.toggle('aperto');
+      areeBtn.setAttribute('aria-expanded', String(aperto));
+    });
+    document.addEventListener('click', function (e) {
+      if (!areeMenu.contains(e.target)) {
+        areeMenu.classList.remove('aperto');
+        areeBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
 
     /* Pagine con più sezioni: i titoli delle sezioni vengono numerati (01, 02…). */
     if (document.querySelectorAll('.section-label').length > 1 &&
@@ -104,6 +127,11 @@
     });
 
     document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && areeMenu.classList.contains('aperto')) {
+        areeMenu.classList.remove('aperto');
+        areeBtn.setAttribute('aria-expanded', 'false');
+        areeBtn.focus();
+      }
       if (e.key === 'Escape' && nmenu.classList.contains('active')) {
         hbtn.classList.remove('open');
         nmenu.classList.remove('active');
