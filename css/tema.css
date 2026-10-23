@@ -142,7 +142,7 @@ footer a:hover{text-decoration:underline!important;}
 .news-wrap{max-width:1080px!important;}
 .news-wrap > .news-row:first-of-type{border-top-width:2px!important;}
 
-/* Colore dell'area nelle pagine Filosofia e scrittura (area-1), Educazione e sociale (area-2), Famiglie e scuola (area-3) */
+/* Colore dell'area nelle pagine Pensiero critico e cultura (area-1), Formazione per educatori (area-2), Educazione e inclusione (area-3) */
 body.area-1{--c:var(--c1);}
 body.area-2{--c:var(--c2);}
 body.area-3{--c:var(--c3);}

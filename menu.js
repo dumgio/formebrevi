@@ -27,9 +27,9 @@
         <div class="voce-aree">
           <button type="button" class="aree-btn" id="areebtn" aria-expanded="false" aria-controls="areemenu">Aree di intervento <span aria-hidden="true">▾</span></button>
           <div class="aree-menu" id="areemenu">
-            <a href="/famiglie.html"   data-page="famiglie.html" class="area a3">Ragazzi e famiglie</a>
-            <a href="/chi-educa.html"  data-page="chi-educa.html" class="area a2">Scuole ed educatori</a>
-            <a href="/filosofia.html"  data-page="filosofia.html" class="area a1">Filosofia e scrittura</a>
+            <a href="/famiglie.html"   data-page="famiglie.html" class="area a3">Educazione e inclusione</a>
+            <a href="/chi-educa.html"  data-page="chi-educa.html" class="area a2">Formazione per educatori</a>
+            <a href="/filosofia.html"  data-page="filosofia.html" class="area a1">Pensiero critico e cultura</a>
           </div>
         </div>
         <a href="/progetti.html"       data-page="progetti.html">Progetti</a>
