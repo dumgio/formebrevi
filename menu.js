@@ -27,12 +27,11 @@
         <div class="voce-aree">
           <button type="button" class="aree-btn" id="areebtn" aria-expanded="false" aria-controls="areemenu">Aree di intervento <span aria-hidden="true">▾</span></button>
           <div class="aree-menu" id="areemenu">
-            <a href="/famiglie.html"   data-page="famiglie.html" class="area a3">Educazione e inclusione</a>
-            <a href="/chi-educa.html"  data-page="chi-educa.html" class="area a2">Formazione per educatori</a>
-            <a href="/filosofia.html"  data-page="filosofia.html" class="area a1">Pensiero critico e cultura</a>
+            <a href="/famiglie.html"   data-page="famiglie.html" class="area a3"><span class="area-testo"><span class="area-titolo">Educazione e inclusione</span><span class="area-sotto">Per famiglie e scuola</span></span></a>
+            <a href="/chi-educa.html"  data-page="chi-educa.html" class="area a2"><span class="area-testo"><span class="area-titolo">Formazione per educatori</span><span class="area-sotto">Per insegnanti, educatori e operatori</span></span></a>
+            <a href="/filosofia.html"  data-page="filosofia.html" class="area a1"><span class="area-testo"><span class="area-titolo">Pensiero critico e cultura</span><span class="area-sotto">Per chi vuole pensare e leggere</span></span></a>
           </div>
         </div>
-        <a href="/progetti.html"       data-page="progetti.html">Progetti</a>
         <a href="/corsi.html"          data-page="corsi.html">Corsi</a>
         <a href="/notizie.html"        data-page="notizie.html">Notizie</a>
         <a href="/contatti.html"       data-page="contatti.html">Contatti</a>
@@ -43,15 +42,19 @@
      2. Mappa delle sotto-pagine → voce padre
      ───────────────────────────────────────────── */
   const PARENT_MAP = {
-    'premio.html':          'chi-siamo.html',
-    'storia.html':          'chi-siamo.html',
-    'edizioni.html':        'chi-siamo.html',
-    'call-for-papers.html': 'filosofia.html',
-    'kalmly.html':          'famiglie.html',
-    'stoicismo.html':       'filosofia.html',
-    'risorse.html':          null,
-    'dialogo.html':          null,
-    'privacy.html':          null
+    'premio.html':                              'chi-siamo.html',
+    'storia.html':                              'chi-siamo.html',
+    'edizioni.html':                            'chi-siamo.html',
+    'call-for-papers.html':                     'filosofia.html',
+    'kalmly.html':                              'famiglie.html',
+    'stoicismo.html':                           'filosofia.html',
+    'corso-progettazione-educativa.html':       'chi-educa.html',
+    'corso-progettazione-sociale.html':         'chi-educa.html',
+    'corso-filosofia-pratica.html':             'filosofia.html',
+    'corso-filosofia-bambini-adolescenti.html': 'filosofia.html',
+    'risorse.html':                              null,
+    'dialogo.html':                              null,
+    'privacy.html':                              null
   };
 
   /* ─────────────────────────────────────────────

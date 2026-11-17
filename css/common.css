@@ -22,6 +22,9 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:var(--f);background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.skip-link{position:absolute;top:-40px;left:0;background:#2A2018;color:#FFFDF9;padding:8px 16px;z-index:200;text-decoration:none;font-size:.9rem;border-radius:0 0 4px 0;}
+.skip-link:focus{top:0;}
+a[target="_blank"]::after{content:" ↗";font-size:.85em;}
 h1,h2,h3,h4{font-family:var(--f-display);text-wrap:balance;}
 
 /* NAVIGAZIONE */

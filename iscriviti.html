@@ -39,6 +39,10 @@
         
         .form-section{max-width:1080px;margin:0 auto;padding:36px 24px 56px;}
         .form-wrap{max-width:720px;}
+        .form-wrap p{font-size:1.05rem;color:var(--muted);line-height:1.65;margin-bottom:24px;}
+        .btn-form{display:inline-flex;gap:10px;align-items:center;background:#111111;color:#ffffff;font-size:.95rem;font-weight:600;text-decoration:none;padding:14px 28px;border-radius:4px;transition:filter .18s;}
+        .btn-form:hover{filter:brightness(1.15);}
+        .btn-form span{font-size:1.1em;}
 
                 footer strong{color:#111111;font-weight:600;}
 
@@ -51,9 +55,10 @@
     <link rel="stylesheet" href="/css/post.css?v=3">
 </head>
 <body>
+<a href="#contenuto" class="skip-link">Salta al contenuto</a>
 
 <nav class="nav"></nav>
-<main>
+<main id="contenuto">
 
 <header class="page-hero">
     <span class="hero-badge badge-lime">Associarsi</span>
@@ -64,17 +69,8 @@
 
 <section class="form-section">
     <div class="form-wrap">
-        <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLScBKvidxu6gfvAtDBn-gnCOljOHHAMTytVPExSOg6Xv5SrowA/viewform?embedded=true"
-            width="100%"
-            height="1966"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            title="Modulo di ammissione Formebrevi APS"
-            style="border:none;display:block;">
-            Caricamento…
-        </iframe>
+        <p>La domanda di ammissione si compila su Google Forms. Cliccando sul pulsante qui sotto si apre il modulo in una nuova scheda.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScBKvidxu6gfvAtDBn-gnCOljOHHAMTytVPExSOg6Xv5SrowA/viewform" class="btn-form" target="_blank" rel="noopener">Compila il modulo di ammissione</a>
     </div>
 </section>
 
